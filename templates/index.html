@@ -1,0 +1,74 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+  <link rel="stylesheet" href="/static/css/app.css"
+  
+</head>
+
+
+<body >
+	
+<hgroup>
+  <h1>easyRASH</h1>
+  <h3>By GAOS -> best web developers ever u.u</h3>
+</hgroup>
+
+<div layout="row" layout-align="center start" layout-wrap ng-app="myApp">
+	      <md-card class="md-whiteframe-16dp" flex="40" flex-xs="80">
+                    <md-card-content>
+<div class="md-inline-form inputdemoBasicUsage">
+
+	<md-input-container class="md-block">
+        <label>Username</label>
+        <input ng-model="user.username">
+      </md-input-container>
+      <md-input-container class="md-block">
+        <label>Password</label>
+        <input ng-model="user.password" type="password">
+      </md-input-container>
+
+<div layout="column">
+<md-button class="md-raised md-accent"> Log in </md-button>
+</div>
+<div layout="column">
+<md-button class="md-raised md-accent"> Sign up </md-button>
+</div>
+
+</div>
+
+                    </md-card-content>
+</md-card>
+
+
+
+
+
+
+</div>
+
+<footer>
+  
+</footer>    
+    
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+  
+  <script src="/static/js/app.js"></script>
+  
+</body>
+</html>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
