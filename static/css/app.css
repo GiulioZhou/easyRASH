@@ -1,7 +1,27 @@
 body {
 	font-family: 'Roboto', sans-serif;
-	background: #607D8B;
+	background: #FF5252;
   -webkit-font-smoothing: antialiased;
+}
+
+.bg-1{
+	background: #607D8B;
+}
+
+.bg-2{
+	background: #FFFFFF;
+}
+
+.discover p{
+	color: #FFFFFF;
+	text-align: center;
+	font-weight: bold;
+	font-size: large;
+	padding-top: 10px;
+}
+
+.user p{
+	text-align: center;
 }
 
 hgroup { 
@@ -12,16 +32,22 @@ hgroup {
 h1, h3 { font-weight: 300; }
 
 h1 { color: #FFFFFF; 
+	font-weight: bold;
 	font-size: 400%; }
 
 h3 { color: #FFFFFF;
-	opacity: 30%; }
+	opacity: 30%;
+	padding-bottom: 20px; }
 
 footer { text-align: center; }
 
 footer p {
-	color: #888;
+	padding-top: 20px;
+	color: #FFFFFF;
 	font-size: 13px;
 	letter-spacing: .4px;
 }
 
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
