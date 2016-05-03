@@ -1,0 +1,55 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+  <link rel="stylesheet" href="/static/css/base.css">
+   
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+</head>
+
+
+<body ng-app="myApp" ng-cloak>
+	
+	<div class="md-whiteframe-4dp">
+		<md-toolbar>
+		
+			<div class="md-toolbar-tools" ng-controller="MyController">
+				
+				<md-button class="md-icon-button" aria-label="Menu" ng-click="openLeftMenu()">
+					<md-icon class="material-icons md-light">menu</md-icon>
+				</md-button>
+				<h2>
+					<span>easyRASH</span>
+       			</h2>
+				<span flex></span>
+			</div>
+		
+		</md-toolbar>
+	</div>
+	
+	
+	<md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-8dp">
+		
+		User profile image with personal info <br>
+		
+		Navigation menu here!
+
+	</md-sidenav>
+		    
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+  
+  <script src="/static/js/app.js"></script>
+  
+</body>
+</html>
