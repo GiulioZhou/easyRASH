@@ -1,4 +1,4 @@
-from flask import Response, request, render_template, send_from_directory
+from flask import Flask, render_template
 from easyRASH import app
 
 @app.route('/', methods=['GET', 'POST'])
