@@ -3,4 +3,4 @@ import json
 
 app = Flask(__name__)
 
-import easyRASH.views
+from easyRASH import views
