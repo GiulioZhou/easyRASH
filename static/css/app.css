@@ -12,7 +12,11 @@ body {
 	background: #FFFFFF;
 }
 
-.discover p{
+.sfondo{
+	min-height: 500px;
+}
+
+.bottom p{
 	color: #FFFFFF;
 	text-align: center;
 	font-weight: bold;
@@ -33,7 +37,8 @@ h1, h3 { font-weight: 300; }
 
 h1 { color: #FFFFFF; 
 	font-weight: bold;
-	font-size: 400%; }
+	font-size: 400%; 
+}
 
 h3 { color: #FFFFFF;
 	opacity: 30%;
@@ -50,4 +55,8 @@ footer p {
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
+}
+
+.login{
+	width: 100%;
 }

@@ -1,79 +1,45 @@
 <html lang="en" >
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  
+
   <!-- Angular Material style sheet -->
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
-  <link rel="stylesheet" href="easyRASH/static/css/app.css"
-  
+  <link rel="stylesheet" href="../easyRASH/static/css/app.css">
+  <link rel="stylesheet" href="../easyRASH/static/css/base.css">
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 
 <body ng-app="myApp" ng-cloak>
-	
-	
-	
 
-<div layout="column">
-
-	<div class=" md-whiteframe-4dp bg-1" flex="90" layout-wrap>
-
-		<div layout="row" layout-align="center center" layout-wrap>	
-		
-			<hgroup flex="80">
-				<h1>easyRASH</h1>
-				<h3>Everything you need to create, organize and manage your Scientific Conference</h3>
-			</hgroup>
-		
-			<md-card class="md-whiteframe-16dp" flex="40" flex-xs="80">
-		        <md-card-content>
-					<div class="md-inline-form">
-		
-						<md-input-container class="md-block">
-							<label>Username</label>
-							<input ng-model="user.username">
-						</md-input-container>
-						<md-input-container class="md-block">
-							<label>Password</label>
-							<input ng-model="user.password" type="password">
-						</md-input-container>
-						
-						<div layout="column" class="user">
-							<md-button href="wsgi/home" class="md-raised md-accent md-fab-button"> Log in </md-button>
-							<p flex-fill>Not a member? Register now!</p>
-						</div>
-					</div>
-		        </md-card-content>
-			</md-card>
-		
-		</div>
-	
-		<footer>
-		
-			<p>	Powered by GAOS </p>
-	  
-		</footer>    
-		
+	<div>
+		<div ng-view></div>
 	</div>
 
-	<div class="discover" flex>
-		<p>Discover easyRASH</p>
-		
-	</div>
-
-</div>
-    
   <!-- Angular Material requires Angular.js Libraries -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
 
+
   <!-- Angular Material Library -->
   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
-  
-  <script src="easyRASH/static/js/app.js"></script>
-  
+
+  <script src="../easyRASH/static/js/app.js"></script>
+  <script src="../easyRASH/static/js/controllers/registrationCtrl.js"></script>
+  <script src="../easyRASH/static/js/controllers/loginCtrl.js"></script>
+  <script src="../easyRASH/static/js/controllers/docCtrl.js"></script>
+  <script src="../easyRASH/static/js/service.js"></script>
+
+  <!-- Libraries for base.html -->
+  <script src="http://codepen.io/assets/libs/fullpage/jquery.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-sanitize.js"></script>
+
+
 </body>
 </html>
