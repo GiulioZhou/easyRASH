@@ -1,8 +1,8 @@
 body {
 	font-family: 'Roboto', sans-serif;
-	background: #FF5252;
+		background: #FF5252;
   -webkit-font-smoothing: antialiased;
-	/*  overflow: hidden;*/
+	  overflow: hidden;
 }
 
 .bg-1{
@@ -12,6 +12,11 @@ body {
 .bg-2{
 	background: #FFFFFF;
 }
+
+.bg-3{
+	background: #FF5252;
+}
+
 
 .sfondo{
 	min-height: 500px;

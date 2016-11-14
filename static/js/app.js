@@ -32,7 +32,6 @@ app.run(function ($rootScope, $location, $route, AuthService) {
       .then(function(){
         if (next.restricted && !AuthService.isLoggedIn()){
           $location.path('/login');
-          $route.reload();
         }
       });
   });

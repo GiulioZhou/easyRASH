@@ -5,7 +5,7 @@
   <!-- Angular Material style sheet -->
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
   <link rel="stylesheet" href="../easyRASH/static/css/app.css">
-  <link rel="stylesheet" href="../easyRASH/static/css/base.css">
+  
   <!-- Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -14,9 +14,9 @@
 
 <body ng-app="myApp" ng-cloak>
 
-	<div>
-		<div ng-view></div>
-	</div>
+	
+	<div ng-view></div>
+
 
   <!-- Angular Material requires Angular.js Libraries -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
@@ -25,21 +25,17 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
-
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-sanitize.js"></script>
 
   <!-- Angular Material Library -->
   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
 
+  <!-- Angular application, controllers and services -->
   <script src="../easyRASH/static/js/app.js"></script>
   <script src="../easyRASH/static/js/controllers/registrationCtrl.js"></script>
   <script src="../easyRASH/static/js/controllers/loginCtrl.js"></script>
-  <script src="../easyRASH/static/js/controllers/docCtrl.js"></script>
+  <script src="../easyRASH/static/js/controllers/documentCtrl.js"></script>
   <script src="../easyRASH/static/js/service.js"></script>
-
-  <!-- Libraries for base.html -->
-  <script src="http://codepen.io/assets/libs/fullpage/jquery.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-sanitize.js"></script>
-
 
 </body>
 </html>

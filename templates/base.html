@@ -1,102 +1,98 @@
 
 <style>
-		#docWindow, ng-include{
-				margin:0;
-				border: none;
-				width: 100%;
-				padding:10%;
-				max-height:80%;
-		}
+	#docWindow, ng-include{
+		margin:0;
+		border: none;
+		width: 100%;
+		padding:10%;
+		max-height:80%;
+	}
+
 		/*Elimina la visualizzazione dello scrollbar ma non funge su fireforx, lo vorrei anche su fireforx ma non ho voglia di cercare GZ*/
-		::-webkit-scrollbar {
-			display: none;
-		}
-		md-list-item, md-button{
-			max-height: 75px !important;
-		}
-		.Mark {
-    background: rgba(255, 10, 10, 0.3);
-}
+	::-webkit-scrollbar {
+		display: none;
+	}
+
+	::-mozilla-scrollbar {
+		display: none;
+	}
+
+	md-list-item, md-button{
+		max-height: 75px !important;
+	}
+
+	.Mark {
+    	background: rgba(255, 10, 10, 0.3);
+	}
+	.md-button.md-fab:not([disabled]) {
+ 	   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+	}
 </style>
 
-<div layout="row"> 
-	<div ng-controller="homeController" layout-fill>
-		<md-sidenav layout="column" md-component-id="left" class="md-sidenav-left md-whiteframe-8dp" >
-			<md-content>
-				<md-toolbar class="md-hue-2 md-whiteframe-4dp"><!-- class md-tall  per farlo alto come prima -->
-					<!-- Questo span serve per mettere questo div in basso 
-					<span flex></span>-->
-					<div layout="column" class="md-toolbar-tools-bottom inset">
-						<div> {[{ usr.name }]} {[{ usr.surname }]}</div>
-						<div>{[{usr.email}]}</div>
-					</div>
-				</md-toolbar>
+
+<div ng-controller="documentController">
+
+	<md-sidenav layout="column" md-component-id="left" class="md-sidenav-left md-whiteframe-8dp" >
+		<md-content>
+
+			<md-toolbar class="md-hue-2 md-whiteframe-4dp"><!-- class md-tall  per farlo alto come prima -->
+				<!-- Questo span serve per mettere questo div in basso
+				<span flex></span>-->
+				<div layout="column" class="md-toolbar-tools-bottom inset">
+					<div> {[{ usr.name }]} {[{ usr.surname }]}</div>
+					<div>{[{usr.email}]}</div>
+				</div>
+			</md-toolbar>
+
+			<section  ng-repeat="event in documents">
+				<md-subheader class="md-primary">{[{event.name}]}</md-subheader>
+				<md-list layout="column" layout-padding>
+					<md-list-item class="md-2-line" ng-repeat="doc in event.docs">
+						<div class="md-list-item-text">
+						  <h3>{[{ doc.title }]}</h3>
+						  <p> {[{doc.role}]}</p>
+						</div>
+						<md-button ng-click="leftMenu('close', doc.url);">
+							<md-tooltip md-direction="bottom">
+								{[{ doc.title }]}
+		   					</md-tooltip> View
+						</md-button>
+						<md-divider ></md-divider>
+					</md-list-item>
+				</md-list>
+			</section>
+
+		</md-content>
+	</md-sidenav>
 
 
-				<section  ng-repeat="event in documents">
-						<!--<h3 style="color : black">{[{event.name}]}</h3>
-						<md-divider ></md-divider>-->
-					<md-subheader class="md-primary">{[{event.name}]}</md-subheader>
-
-					<md-list layout="column" layout-padding>
-							<!-- Secondo me va bene anche 3-line GZ -->
-						  <md-list-item class="md-2-line" ng-repeat="doc in event.docs">
-							<div class="md-list-item-text">
-							  <h3>{[{ doc.title }]}</h3>
-							  <p> {[{doc.role}]}</p>
-
-							</div>
-
-							<!-- Quando clicko view deve chiudersi la sidebar! GZ -->
-							<md-button ng-click="leftMenu('close', doc.url);">
-								<md-tooltip md-direction="bottom">
-									{[{ doc.title }]}
-			   					</md-tooltip>
-								View
-							</md-button>
-							<md-divider ></md-divider>
-						  </md-list-item>
-					</md-list>
-				</section>
-			</md-content>
-		</md-sidenav>
-
+    <div layout="column" class="relative" layout-fill role="main">
 
 		<md-toolbar  class="md-whiteframe-4dp ">
-
 			<div class="md-toolbar-tools">
-
 				<md-button class="md-icon-button" aria-label="Menu" ng-click="leftMenu('open', null);">
 					<md-icon class="material-icons md-light">menu</md-icon>
 				</md-button>
-				<h2>
-					<span>easyRASH</span>
-				</h2>
-				<span flex></span>
+				<h2>easyRASH</h2>
 			</div>
 
 		</md-toolbar>
 
+		<md-content flex md-scroll-y>
 
-<div layout-fill layout flex class="md-padding">
+			<ui-view layout="column" layout-padding>
+            	<div layout="row" layout-align="center center">
+                	<md-card flex-gt-xs="90" flex-gt-md="80" resize-frame>
+                		<md-card-content  class="md-whiteframe-8dp" ng-include="curDoc">
+                    	</md-card-content>
+                	</md-card>
+            	</div>
+        	</ui-view>
 
-<!-- Download the svg from here https://material.io/icons/ -->
-
-	 <md-button class="md-fab md-fab-bottom-right" aria-label="Add"  ng-click="annotate($event)" >
-        <md-icon  md-svg-icon="../easyRASH/static/icons/message.svg"></md-icon>
-      </md-button>
-
-
-	<div layout layout-fill layout-align="center center"><!-- layout fill per centrare -->
-
-		<md-content  class="md-whiteframe-16dp" resize-frame flex="80" id="docWindow" > <!-- c'era anche frameborder="0" -->
-			<ng-include src="getDoc()" ></ng-include>
 		</md-content>
-	</div>
-	<span flex></span>
 
-</div>
-		
+		<md-button class="md-fab md-fab-bottom-right" aria-label="Add"  ng-click="annotate($event)" >
+			<md-icon class="material-icons md-light">message</md-icon>
+    	</md-button>
 	</div>
 </div>
-<!-- fine base 	NON RIMUOVERE QUESTO COMMENTO -->

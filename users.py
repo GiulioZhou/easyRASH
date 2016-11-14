@@ -11,7 +11,6 @@ def get_static_json_file(filename):
     url = ret_url(filename)
     return json.load(open(url))
 
-#https://realpython.com/blog/python/handling-user-authentication-with-angular-and-flask/
 
 @app.route('/api/register', methods=['POST'])
 def register():
@@ -27,21 +26,14 @@ def register():
             status = 'success'
         return jsonify({'result': status})
 
+
 @app.route('/api/login',methods=['POST'])
 def login():
     json_data = request.json
-
-	#NON FUNZIONA LA OPEN!
     data=get_static_json_file("users.json")
     status = False
     for user in data.values():
-		#il problema era che dovevo mettere .values()
-		#user["email"] NON FUNZIONA
         if user["email"]==json_data["email"] and user["pass"]==json_data["pass"]:
-			#session NON FUNZIONA
-			#bisogna importare session da flask, se non funziona bisogna mettere la configurazione della chiave nel main
-			#ok ho messo la chiave in init
-
             session["email"] = user["email"]
             session["name"] = user["given_name"]
             session["surname"] = user["family_name"]
@@ -50,10 +42,12 @@ def login():
             break
     return jsonify({'result': status})
 
+
 @app.route('/api/logout')
 def logout():
 	session.pop('logged_in', None)
 	return jsonify({'result': 'success'})
+
 
 @app.route('/api/status')
 def status():
@@ -62,6 +56,7 @@ def status():
             return jsonify({'status': True})
     else:
         return jsonify({'status': False})
+
 
 @app.route('/api/getUser', methods=['GET'])
 def getUser():
