@@ -1,8 +1,8 @@
 body {
 	font-family: 'Roboto', sans-serif;
-		background: #FF5252;
-  -webkit-font-smoothing: antialiased;
-	  overflow: hidden;
+	background: #FF5252;
+	-webkit-font-smoothing: antialiased;
+	overflow: auto;
 }
 
 .bg-1{
@@ -48,9 +48,11 @@ h1 { color: #FFFFFF;
 
 h3 { color: #FFFFFF;
 	opacity: 30%;
-	padding-bottom: 20px; }
+	padding-bottom: 20px; 
+}
 
-footer { text-align: center; }
+footer { text-align: center; 
+}
 
 footer p {
 	padding-top: 20px;
@@ -60,9 +62,45 @@ footer p {
 }
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
-  display: none !important;
+	display: none !important;
 }
 
 .login{
 	width: 100%;
+}
+
+#docWindow, ng-include{
+	margin:0;
+	border: none;
+	width: 100%;
+	padding:10%;
+	max-height:80%;
+}
+
+
+/*per sovrascrivere i css di rash*/
+.no-before::before {
+
+	content: "" !important;
+
+}
+
+/*Elimina la visualizzazione dello scrollbar*/
+::-webkit-scrollbar {
+	display: none;
+}
+
+::-mozilla-scrollbar {
+	display: none;
+}
+
+md-list-item, md-button{
+	max-height: 75px !important;
+}
+
+.Mark {
+	background: rgba(255, 10, 10, 0.3);
+}
+.md-button.md-fab:not([disabled]) {
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }

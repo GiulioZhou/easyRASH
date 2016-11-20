@@ -3,12 +3,12 @@ from easyRASH import app
 import json, os
 
 #returns the path to a file
-def ret_url(filename):
-    return os.path.join(current_app.root_path, current_app.static_folder, filename)
+def ret_url(filename,folder):
+    return os.path.join(current_app.root_path, current_app.static_folder+folder, filename)
 #Function that returns the content of a jsonfile
 #https://www.reddit.com/r/flask/comments/2i102e/af_how_to_open_static_file_specifically_json/
 def get_static_json_file(filename):
-    url = ret_url(filename)
+    url = ret_url(filename, "/json")
     return json.load(open(url))
 
 
@@ -21,7 +21,7 @@ def register():
             status = 'this user is already registered'
         else:
             data[key] = json_data
-            with open(ret_url("users.json"), "w") as file:
+            with open(ret_url("users.json", "/json"), "w") as file:
                 json.dump(data, file)
             status = 'success'
         return jsonify({'result': status})

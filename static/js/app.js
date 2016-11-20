@@ -1,6 +1,6 @@
  var app = angular.module('myApp', ['ngMaterial','ngRoute'])
 
- .config(function($mdThemingProvider, $routeProvider, $interpolateProvider) {
+ .config(function ($mdThemingProvider, $routeProvider, $interpolateProvider) {
 
  	$mdThemingProvider.theme('default')
  	.primaryPalette('blue-grey')
@@ -22,10 +22,10 @@
       redirectTo: '/'
     });
 
- });
+ })
 
 
-app.run(function ($rootScope, $location, $route, AuthService) {
+  .run(function ($rootScope, $location, $route, AuthService) {
   $rootScope.$on('$routeChangeStart',
     function (event, next, current) {
       AuthService.getUserStatus()

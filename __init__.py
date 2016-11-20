@@ -6,4 +6,4 @@ app = Flask(__name__)
 app.config['SESSION_TYPE'] = 'memcached'
 app.config['SECRET_KEY'] = 'super secret key'
 
-from easyRASH import views, users, events
+from easyRASH import views, users, events, annotatorMode

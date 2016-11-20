@@ -1,0 +1,72 @@
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
+    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
+KeyError: 'doc'
+ERROR:easyRASH:Exception on /api/save [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1504, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1264, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1262, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1248, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
+    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
+KeyError: 'doc'
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
+    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
+KeyError: 'doc'
+ERROR:easyRASH:Exception on /api/save [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1504, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1264, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1262, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1248, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
+    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
+KeyError: 'doc'
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
+    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
+KeyError: 'doc'
+ERROR:easyRASH:Exception on /api/save [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1504, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1264, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1262, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1248, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
+    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
+KeyError: 'doc'
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
+    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
+KeyError: 'doc'
+ERROR:easyRASH:Exception on /api/save [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1504, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1264, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1262, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1248, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
+    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
+KeyError: 'doc'

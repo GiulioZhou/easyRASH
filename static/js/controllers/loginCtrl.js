@@ -64,7 +64,6 @@ angular.module('myApp').controller("loginController",
 				});
 			};
 
-
 		//functions for registration dialog
 		$scope.showAdvanced = function(ev) {
 			$mdDialog.show({

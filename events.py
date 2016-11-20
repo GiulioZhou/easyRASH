@@ -1,8 +1,16 @@
 from flask import Flask, request, jsonify
 from easyRASH import app
 from users import ret_url, get_static_json_file, session
-import json, os
+from BeautifulSoup import BeautifulSoup, Tag
+import json, os, logging
 
+#Per il debugging import logging
+#LOG_FILE = ret_url("err.log","")
+#logging.basicConfig(filename=LOG_FILE, level=logging.DEBUG)
+#Try: fa qualcosa
+#except:
+#   logging.exception("exception")
+#   raise
 
 @app.route('/api/getDocs', methods=['GET'])
 def events():
@@ -42,3 +50,35 @@ def events():
                 "docs" : docs[:]
             })
     return jsonify({'ret' : result})
+
+
+@app.route('/api/save', methods=['POST'])
+def save():
+    json_data = request.json
+    status = False
+    data={}
+
+    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
+
+        txt = inf.read()
+        soup = BeautifulSoup(txt) 
+        #Controllo se lo script esiste o meno, se esiste lo elimino
+        for script in soup.findAll("script",{"type":"application/ld+json"}):
+            data = json.loads(script.text.strip())
+            if data[0]["@type"] == "review":
+                if data[0]["article"]["eval"]["author"] == "mailto:"+json_data["author"]:
+                    script.extract()
+                    break
+        #inserisco lo script
+        new = Tag(soup, "script")
+        new.attrs.append(("type", "application/ld+json"))
+        new.string = json.dumps(json_data["script"])
+        soup.head.insert(len(soup.head.contents), new)
+        html = soup.prettify("utf_8")
+        inf.seek(0)
+        inf.write(html)
+        inf.truncate()
+        inf.close()
+
+    status=True 
+    return jsonify({"result": status})

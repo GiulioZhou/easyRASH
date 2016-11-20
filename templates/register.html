@@ -1,6 +1,6 @@
 <md-dialog class="md-whiteframe-16dp" flex="60" flex-xs="80" flex-sm="70" ng-controller="regiController">
 
-	<md-dialog-content layout-padding>						
+	<md-dialog-content layout-padding>
 		<div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
 
 		<!-- I don't know why ng-submit="register()" doesn't work" -->
@@ -35,7 +35,7 @@
 				<md-radio-button value="Female"> Female </md-radio-button>
 				<md-radio-button value="Banana"> Banana </md-radio-button>
 			</md-radio-group>
-		
+
 			<div layout="column">
 				<md-button ng-click="register()" class="md-raised md-accent md-fab-button" > Register </md-button>
 			</div>

@@ -1,37 +1,44 @@
-
 <style>
-	#docWindow, ng-include{
-		margin:0;
-		border: none;
-		width: 100%;
-		padding:10%;
-		max-height:80%;
-	}
 
-		/*Elimina la visualizzazione dello scrollbar ma non funge su fireforx, lo vorrei anche su fireforx ma non ho voglia di cercare GZ*/
-	::-webkit-scrollbar {
-		display: none;
-	}
+#docWindow, ng-include{
+	margin:0;
+	border: none;
+	width: 100%;
+	padding:10%;
+	max-height:80%;
+}
 
-	::-mozilla-scrollbar {
-		display: none;
-	}
 
-	md-list-item, md-button{
-		max-height: 75px !important;
-	}
+/*per sovrascrivere i css di rash*/
+.no-before::before {
 
-	.Mark {
-    	background: rgba(255, 10, 10, 0.3);
-	}
-	.md-button.md-fab:not([disabled]) {
- 	   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
-	}
+	content: "" !important;
+
+}
+
+/*Elimina la visualizzazione dello scrollbar*/
+::-webkit-scrollbar {
+	display: none;
+}
+
+::-mozilla-scrollbar {
+	display: none;
+}
+
+md-list-item, md-button{
+	max-height: 75px !important;
+}
+
+.Mark {
+	background: rgba(255, 10, 10, 0.3);
+}
+.md-button.md-fab:not([disabled]) {
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
 </style>
-
-
 <div ng-controller="documentController">
 
+	<!-- LEFT SIDENAV -->
 	<md-sidenav layout="column" md-component-id="left" class="md-sidenav-left md-whiteframe-8dp" >
 		<md-content>
 
@@ -43,13 +50,13 @@
 					<div>{[{usr.email}]}</div>
 				</div>
 			</md-toolbar>
-
+<!-- provare a spostare l'inizio di md-content qui -->
 			<section  ng-repeat="event in documents">
 				<md-subheader class="md-primary">{[{event.name}]}</md-subheader>
 				<md-list layout="column" layout-padding>
 					<md-list-item class="md-2-line" ng-repeat="doc in event.docs">
 						<div class="md-list-item-text">
-						  <h3>{[{ doc.title }]}</h3>
+						  <h3 class="no-before">{[{ doc.title }]}</h3>
 						  <p> {[{doc.role}]}</p>
 						</div>
 						<md-button ng-click="leftMenu('close', doc.url);">
@@ -65,34 +72,99 @@
 		</md-content>
 	</md-sidenav>
 
-
+	<!-- TOOLBAR -->
     <div layout="column" class="relative" layout-fill role="main">
 
-		<md-toolbar  class="md-whiteframe-4dp ">
+		<md-toolbar  layout="row" class="md-whiteframe-4dp ">
 			<div class="md-toolbar-tools">
 				<md-button class="md-icon-button" aria-label="Menu" ng-click="leftMenu('open', null);">
 					<md-icon class="material-icons md-light">menu</md-icon>
 				</md-button>
 				<h2>easyRASH</h2>
+				<md-button class="md-accent" ng-click="logout()">Logout</md-button>
+				<span flex></span>
+			 <md-button class="md-raised md-primary" aria-label="Annotator Mode">
+				 Annotator Mode
+			 </md-button>
+			 <md-button class="md-icon-button" aria-label="View Annotations" ng-click="rightMenu('open', curDoc);">
+				 <md-tooltip md-direction="bottom">
+					 View Annotations
+					 </md-tooltip>
+				 <md-icon class="material-icons md-light">visibility</md-icon>
+			 </md-button>
 			</div>
 
 		</md-toolbar>
 
 		<md-content flex md-scroll-y>
 
-			<ui-view layout="column" layout-padding>
+			<div layout="column" layout-padding>
             	<div layout="row" layout-align="center center">
-                	<md-card flex-gt-xs="90" flex-gt-md="80" resize-frame>
+            	 	<div flex-gt-xs="90" flex-gt-md="80" resize-frame layout-padding>
+                		<md-content  class="md-whiteframe-8dp" layout-padding ng-include="curDoc+'?updated='+updateTime">
+                    	</md-content>
+                	</div>
+                	<!-- <md-card flex-gt-xs="90" flex-gt-md="80" resize-frame>
                 		<md-card-content  class="md-whiteframe-8dp" ng-include="curDoc">
                     	</md-card-content>
-                	</md-card>
+                	</md-card> -->
             	</div>
-        	</ui-view>
+      </div>
 
 		</md-content>
 
 		<md-button class="md-fab md-fab-bottom-right" aria-label="Add"  ng-click="annotate($event)" >
 			<md-icon class="material-icons md-light">message</md-icon>
-    	</md-button>
+    </md-button>
+    <md-button class="md-fab md-fab-bottom-left" aria-label="save"  ng-click="save($event)" >
+			<md-icon class="material-icons md-light">save</md-icon>
+    </md-button>
 	</div>
+
+	<!-- right sidenav -->
+	<md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
+
+      <md-toolbar class="md-theme-light" layout="row" layout="center center">
+				<div class="md-toolbar-tools">
+        <!--<md-button class="{[{ classFstButton }]} md-hue-1" ng-click="viewAnnot(0)" flex="50">yet to save</md-button>
+
+				<md-button class=" {[{ classSndButton }]}  md-hue-1" ng-click="viewAnnot(1)" flex="50">Saved</md-button>-->
+				<h2>Annotations</h2>
+			</div>
+      </md-toolbar>
+			<md-tabs md-dynamic-height md-swipe-content md-stretch-tabs="always" class="md-primary">
+				<md-tab label="yet to save">
+					<md-content class="md-padding">
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+					</md-content>
+				</md-tab>
+				<md-tab label="saved">
+					<md-content class="md-padding">
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+						<p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+						<p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+					</md-content>
+				</md-tab>
+			</md-tabs>
+<!--
+		<md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="one">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Tab One</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+        </md-content>
+      </md-tab>
+      <md-tab label="two">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Tab Two</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+          <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+        </md-content>
+      </md-tab>
+		</md-tabs>
+-->
+    </md-sidenav>
 </div>
