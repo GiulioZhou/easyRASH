@@ -1,0 +1,32 @@
+<md-list>
+  <!--  ng-repeat="com in comments">
+    <md-subheader ng-show="ruolo === chair" class="md-primary">{[{reviewer.name}]}</md-subheader>
+    <md-subheader ng-show="ruolo !== chair" class="md-primary">{[{reviewer.number}]}</md-subheader>-->
+  <md-subheader class="md-primary">Name Surname / Reviewer 1</md-subheader>
+    <md-list-item class="comment-list" ng-click="chiudimenuevaialcommento()">
+
+        <p class="saved-comment" >{[{ commento.testo }]}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+          Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+          In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+          feugiat ultricies mi.
+        </p>
+
+
+      </md-list-item>
+      <md-divider></md-divider>
+  <md-subheader class="md-primary">Name2 Surname2 / Reviewer 2</md-subheader>
+    <md-list-item class="comment-list" ng-click="chiudimenuevaialcommento()">
+
+        <p class="saved-comment" >{[{ commento.testo }]}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+          Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+          In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+          feugiat ultricies mi.
+        </p>
+
+
+      </md-list-item>
+      <md-divider></md-divider>
+    </md-list>
+

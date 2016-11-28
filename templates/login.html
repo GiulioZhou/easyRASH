@@ -1,15 +1,13 @@
 <md-card class="md-whiteframe-16dp" flex="40" flex-xs="80" flex-sm="55">
 	<md-card-content>	
-		<div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
+		<div ng-show="error" class="alert alert-danger">{[{errorMessage}]}</div>
 
 		<form ng-submit="login()">
-
 			<md-input-container class="md-block">
 				<label>Username</label>
 				<input type="text" class="form-control" name="email" ng-model="loginForm.email" required>
 			</md-input-container>
 
-			</md-input-container>
 			<md-input-container class="md-block">
 				<label>Password</label>
 				<input type="password" class="form-control" name="password" ng-model="loginForm.password" required>
@@ -20,6 +18,5 @@
 				<p>Not a member? <a ng-click="showAdvanced($event)">Register now</a></p>
 			</div>
 		</form>
-		<p>{[{loginForm.email}]} ciao {[{1+1}]}</p>
 	</md-card-content>
 </md-card>

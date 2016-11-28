@@ -1,9 +1,43 @@
-ERROR:root:exception
+DEBUG:root:International Web Comics Conference 2016
+DEBUG:root:wade-savesd2016.html
+DEBUG:root:[u'Silvio Peroni <silvio:peroni@unibo.it>', u'Angelo Di Iorio <angelo.diiorio@unibo.it>']
+DEBUG:root:{u'conference': u'International Web Comics Conference 2016', u'acronym': u'IWCC 2016', u'submissions': [{u'status': u'UNDER REVIEW', u'title': u'The Microsoft Academic Graph: New Applications and Research Opportunities -- SAVE-SD 2016 Keynote Talk', u'url': u'wade-savesd2016.html', u'reviewers': [u'Silvio Peroni <silvio:peroni@unibo.it>', u'Angelo Di Iorio <angelo.diiorio@unibo.it>'], u'mutex': u'0', u'authors': [u'Alex Wade <alex.wade@example.com>']}, {u'status': u'UNDER REVIEW', u'title': u'Semantic Publishing Challenge: Bootstrapping a Value Chain for Scientific Data ', u'url': u'vahdati-savesd2016.html', u'reviewers': [u'Alice Liddell <alice.liddell@whiterabbit.com>', u'Arthur Dent <arthur.dent@fish.com>'], u'mutex': u'0', u'authors': [u'Sahar Vahdati <vahdati@example.com>', u'Anastasia Dimou <anastasia.dimou@example.com>', u'Christoph Lange <math.semantic.web@example.com>', u'Angelo Di Iorio <angelo.diiorio@unibo.it>']}, {u'status': u'UNDER REVIEW', u'title': u'It ROCS! -- The RASH Online Conversion Service', u'url': u'diiorio-www2016.html', u'reviewers': [u'Arabella Strange <arabella.strange@york.com>', u'John Constantine <john.constantine@hell.com>'], u'mutex': u'0', u'authors': [u'Angelo Di Iorio <angelo.diiorio@unibo.it>', u'Alejandra Gonzalez-Beltran <alejandra.gonzalezbeltran@example.com>', u'Francesco Osborne <francesco.osborne@example.com>', u'Silvio Peroni <silvio.peroni@unibo.it>', u'Francesco Poggi <francesco.poggi5@unibo.it>', u'Fabio Vitali <fabio.vitali@unibo.it>']}, {u'status': u'UNDER REVIEW', u'title': u'RASH: Research Articles in Simplified HTML -- Documentation - Version 0.5, February 15, 2016', u'url': u'peroni-rashdoc2016.html', u'reviewers': [u'Lyra Belacqua <lyra.belacqua@ox.com>', u'Arthur Dent <arthur.dent@fish.com>'], u'mutex': u'0', u'authors': [u'Silvio Peroni <silvio.peroni@unibo.it>']}, {u'status': u'UNDER REVIEW', u'title': u'Science Bots: A Model for the Future of Scientific Computation?', u'url': u'kuhn-savesd2015.html', u'reviewers': [u'Silvio Peroni <silvio:peroni@unibo.it>', u'Arabella Strange <arabella.strange@york.com>'], u'mutex': u'0', u'authors': [u'Tobias Kuhn <tokuhn@example.com>']}], u'chairs': [u'Jessica Jones <jessica.jones@alias.com>', u'Vanessa Ives <vanessa.ives@hell.com>', u'Fabio Vitali <fabio.vitali@unibo.it>'], u'pc_members': [u'Silvio Peroni <silvio:peroni@unibo.it>', u'Angelo Di Iorio <angelo.diiorio@unibo.it>', u'Lyra Belacqua <lyra.belacqua@ox.com>', u'Alice Liddell <alice.liddell@whiterabbit.com>', u'Arthur Dent <arthur.dent@fish.com>', u'Arabella Strange <arabella.strange@york.com>', u'John Constantine <john.constantine@hell.com>']}
+ERROR:easyRASH:Exception on /api/updateStatus [POST]
 Traceback (most recent call last):
-  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
-    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
-KeyError: 'doc'
-ERROR:easyRASH:Exception on /api/save [POST]
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1504, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1265, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1339, in make_response
+    return self.response_class.force_type(rv, request.environ)
+  File "/usr/lib/python2.7/dist-packages/werkzeug/wrappers.py", line 711, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "/usr/lib/python2.7/dist-packages/werkzeug/wrappers.py", line 55, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "/usr/lib/python2.7/dist-packages/werkzeug/test.py", line 818, in run_wsgi_app
+    app_iter = app(environ, start_response)
+TypeError: 'dict' object is not callable
+DEBUG:root:International Web Comics Conference 2016
+DEBUG:root:wade-savesd2016.html
+DEBUG:root:[u'Silvio Peroni <silvio:peroni@unibo.it>', u'Angelo Di Iorio <angelo.diiorio@unibo.it>']
+DEBUG:root:International Web Comics Conference 2016
+ERROR:easyRASH:Exception on /api/updateStatus [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1504, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1265, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1339, in make_response
+    return self.response_class.force_type(rv, request.environ)
+  File "/usr/lib/python2.7/dist-packages/werkzeug/wrappers.py", line 711, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "/usr/lib/python2.7/dist-packages/werkzeug/wrappers.py", line 55, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "/usr/lib/python2.7/dist-packages/werkzeug/test.py", line 818, in run_wsgi_app
+    app_iter = app(environ, start_response)
+TypeError: 'dict' object is not callable
+DEBUG:root:pso:rejected-for-publication
+ERROR:easyRASH:Exception on /api/updateStatus [POST]
 Traceback (most recent call last):
   File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1504, in wsgi_app
     response = self.full_dispatch_request()
@@ -13,60 +47,46 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1248, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
-    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
-KeyError: 'doc'
+  File "/home/web/site1610/html/easyRASH/events.py", line 95, in upStatus
+    return jsonify({'ret' : result})
+NameError: global name 'result' is not defined
+DEBUG:root:pso:rejected-for-publication
+DEBUG:root:pso:rejected-for-publication
+DEBUG:root:REJECTED
+DEBUG:root:REJECTED
+DEBUG:root:ACCEPTED
+DEBUG:root:REJECTED
+DEBUG:root:ACCEPTED
+DEBUG:root:REJECTED
+DEBUG:root:ACCEPTED
+DEBUG:root:AWAITING DECISION
+DEBUG:root:0:01:03
+DEBUG:root:AWAITING DECISION
 ERROR:root:exception
 Traceback (most recent call last):
-  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
-    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
-KeyError: 'doc'
-ERROR:easyRASH:Exception on /api/save [POST]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1504, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1264, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1262, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1248, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
-    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
-KeyError: 'doc'
+  File "/home/web/site1610/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
 ERROR:root:exception
 Traceback (most recent call last):
-  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
-    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
-KeyError: 'doc'
-ERROR:easyRASH:Exception on /api/save [POST]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1504, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1264, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1262, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1248, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
-    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
-KeyError: 'doc'
+  File "/home/web/site1610/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
 ERROR:root:exception
 Traceback (most recent call last):
-  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
-    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
-KeyError: 'doc'
-ERROR:easyRASH:Exception on /api/save [POST]
+  File "/home/web/site1610/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
 Traceback (most recent call last):
-  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1504, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1264, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1262, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1248, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/web/site1610/html/easyRASH/events.py", line 64, in save
-    with open(ret_url(json_data["doc"],"/papers"), "r+") as inf:
-KeyError: 'doc'
+  File "/home/web/site1610/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request

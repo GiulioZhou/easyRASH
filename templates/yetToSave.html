@@ -1,1 +1,32 @@
-yet to save
+<md-list>
+  <md-subheader class="md-no-sticky">Here you can modify, delete or save your comments</md-subheader>
+    <md-list-item class="comment-list">
+      <p class="saved-comment">
+        Comment text
+      </p>
+      <md-menu class="md-secondary">
+        <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
+          <md-icon class="material-icons md-light">create</md-icon>
+        </md-button>
+        <md-menu-content width="4">
+          <md-menu-item>
+            <md-button>
+              Modify
+            </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button>
+              Delete
+            </md-button>
+          </md-menu-item>
+          <md-menu-divider></md-menu-divider>
+          <md-menu-item>
+            <md-button  ng-click="$mdCloseMenu($event)">
+              Cancel
+            </md-button>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
+    </md-list-item>
+    <md-divider></md-divider>
+</md-list>

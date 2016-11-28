@@ -59,11 +59,12 @@ var app = angular.module('myApp').factory('AuthService',
 			var deferred = $q.defer();
 
 			// send a get request to the server
-			$http.get('api/logout')
+			$http.get('wsgi/api/logout')
 				// handle success
 				.success(function (data) {
 					user = false;
 					deferred.resolve();
+					location.reload();
 				})
 				// handle error
 				.error(function (data) {

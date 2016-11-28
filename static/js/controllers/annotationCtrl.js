@@ -61,7 +61,7 @@ angular.module('myApp')
 
 		function insertSpan(selection){
 		  var span = document.createElement("span");
-		  span.className = "Mark"
+		  span.className = "evidenziato"
 		  span.appendChild(selection.extractContents());
 		  selection.insertNode(span);
 		}

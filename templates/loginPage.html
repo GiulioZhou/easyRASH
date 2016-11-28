@@ -1,18 +1,24 @@
-
-<div layout="column" ng-controller="loginController">
-
-	<div class=" md-whiteframe-4dp bg-1" flex="90"  flex-xs="95" flex-sm="95">
-
-		<div layout="column" layout-align="center center">
-
-			<h1>easyRASH</h1>
-
-			<div ng-include="'../easyRASH/templates/login.html'" class="login" layout="row" layout-align="center center">
-			</div>
-		</div>
-	</div>
-
-	<div class="bottom" flex>
-		<p hide-sm hide-xs>	Powered by GAOS </p>
-	</div>
+<div layout="column" layout-fill ng-controller="loginController">
+<md-content class="bg-1" layout="column" layout-align="start stretch">
+	<main class="main">
+		<h1>easyRASH</h1>
+		<div ng-include="'../easyRASH/templates/login.html'" layout="row" layout-align="center center"></div>
+	</main>
+	<span flex></span>
+	<footer class="GAOS">
+		Powered by GAOS
+	</footer>
+</md-content>
 </div>
+<!--
+<md-content layout="column">
+    <main>
+      <p>content</p>
+      <p>content</p>
+    </main>
+    <span flex></span>
+    <footer>
+      <p>footer</p>
+    </footer>
+  </md-content>
+</div> -->
