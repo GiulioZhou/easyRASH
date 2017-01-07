@@ -43,7 +43,7 @@ angular.module('myApp')
 
 	 //Aggiorna i documenti
 	 function updateDocs(){
-		 $http.get("wsgi/api/getDocs").success(function(data,status,headers,config){
+		 $http.get("api/getDocs").success(function(data,status,headers,config){
 			 _docs=data.ret;
 		 });
 		 return _docs;

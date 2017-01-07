@@ -1,7 +1,8 @@
 <md-card class="md-whiteframe-16dp" flex="40" flex-xs="80" flex-sm="55">
-	<md-card-content>	
-		<div ng-show="error" class="alert alert-danger">{[{errorMessage}]}</div>
-
+	<md-card-content>
+		<div ng-if="error" id="error">
+			<b layout="row" layout-align="center center" class="md-padding">{[{errorMessage}]}</b>
+		</div>
 		<form ng-submit="login()">
 			<md-input-container class="md-block">
 				<label>Username</label>

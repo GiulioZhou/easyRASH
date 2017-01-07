@@ -1,0 +1,41 @@
+<md-fab-speed-dial md-open="isOpen" md-direction="up" ng-class="'md-scale'">
+	
+	<md-fab-trigger>
+		<md-button aria-label="add" class="md-fab">
+			<md-icon class="material-icons md-light">add</md-icon>
+		</md-button>
+	</md-fab-trigger>
+	
+	<md-fab-actions>
+		
+		<md-button aria-label="annotate"  ng-click="annotate($event)" class="md-fab md-raised md-mini">	
+			<md-tooltip md-direction="left">
+				Create new annotation
+			</md-tooltip>
+			<md-icon class="material-icons md-light">message</md-icon>
+		</md-button>
+		
+		<md-button  aria-label="decide"  ng-click="decide($event)"  class="md-fab md-raised md-mini">
+			<md-tooltip md-direction="left">
+				Insert final decision
+			</md-tooltip>
+			<md-icon class="material-icons md-light">spellcheck</md-icon>
+		</md-button>
+		
+		<md-button  aria-label="judgment"  ng-click="judge($event)"  class="md-fab md-raised md-mini">
+			<md-tooltip md-direction="left">
+				Insert overall judgment
+			</md-tooltip>
+			<md-icon class="material-icons md-light">spellcheck</md-icon>
+		</md-button>
+		
+		<md-button aria-label="save"  ng-click="save($event)" class="md-fab md-raised md-mini">
+			<md-tooltip md-direction="left">
+				Save everything
+			</md-tooltip>
+			<md-icon class="material-icons md-light">save</md-icon>
+		</md-button>
+
+	</md-fab-actions>
+
+</md-fab-speed-dial>

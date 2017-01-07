@@ -1,148 +1,19 @@
-<style>
-</style>
 <div ng-controller="documentController" ng-cloak>
-	<!-- LEFT SIDENAV -->
-	<md-sidenav layout="column" md-component-id="left" class="md-sidenav-left md-whiteframe-8dp" >
-		<md-content>
-			<md-toolbar>
-		        <span flex></span>
-		        <md-tabs md-dynamic-height md-swipe-content md-stretch-tabs="always" class="md-primary" md-selected="data.selectedIndex">
-		          <md-tab id="tab1" aria-controls="Event">
-		            Events
-		          </md-tab>
-		          <md-tab id="tab2" aria-controls="Annotations">
-		            Annotations
-		          </md-tab>
-		        </md-tabs>
-	        </md-toolbar>
-        
-            <ng-switch on="data.selectedIndex" ng-animate="animate">
-              <div role="tabpanel"
-                   id="tab1-content"
-                   aria-labelledby="Events"
-                   ng-switch-when="0"
 
-                   layout="column" >
-                               
-				<!-- provare a spostare l'inizio di md-content qui -->
-							<section  ng-repeat="event in documents">
-								<md-subheader class="md-primary">{[{event.name}]}</md-subheader>
-								<md-list layout="column" layout-padding>
-									<md-list-item class="md-2-line md-button"  md-ink-ripple ng-repeat="doc in event.docs" >
-										<div class="md-list-item-text nav-but"  ng-click="leftMenu('close', doc.url, doc.role, doc.title, event.name)">
-										  <h3 class="no-before">{[{ doc.title }]}</h3>
-										  <p> {[{doc.role}]}</p>
-										  <span  ng-style="statusColor(doc.status)"> {[{doc.status}]}</span>
+	<sidenav></sidenav>
 
-										</div>
-										<md-divider ></md-divider>
-									</md-list-item>
-								</md-list>
-							</section>
-
-		             
-              </div>
-              <div role="tabpanel"
-                   id="tab2-content"
-                   aria-labelledby="Annotations"
-                                      ng-switch-when="1"
-
-                   layout="column">
-                  						 <div saved-annot></div>
-
-              </div>
-              
-          </ng-switch>
-       
-      </md-content>
-	</md-sidenav>
-
-	<!-- TOOLBAR -->
     <div layout="column" class="relative no-before" layout-fill role="main">
 
-		<md-toolbar  layout="row" class="md-whiteframe-4dp ">
-			<div class="md-toolbar-tools">
-				<md-button class="md-icon-button" aria-label="Menu" ng-click="leftMenu('open', null);">
-					<md-icon class="material-icons md-light">menu</md-icon>
-				</md-button>
-				<h2 ng-click="homepage()">easyRASH</h2>
-				<span flex></span>
-			 <md-button  ng-click="clicca(url,role)" class="md-raised md-primary" aria-label="Annotator Mode">
-				 {[{buttonText}]}
-			 </md-button>
-			 
-			 <md-button class="md-icon-button" aria-label="View Annotations" ng-click="rightMenu('open', curDoc);">
-				 <md-tooltip md-direction="bottom">
-					 View Annotations
-					 </md-tooltip>
-				 <md-icon class="material-icons md-light">visibility</md-icon>
-			 </md-button>
-			</div>
-
-		</md-toolbar>
+		<toolbar></toolbar>
 
 		<md-content flex md-scroll-y class="back">
-
-			<div layout="column" layout-padding>
-            	<div layout="row" layout-align="center center">
-            	 	<div flex-gt-xs="90" flex-gt-md="80" resize-frame layout-padding>
-            	 		
-                		<md-content  class="md-whiteframe-8dp"  layout-padding >
-                		<div class="title"><h1>{[{title}]}</h1></div>
-                		<div id="paper" ng-include="curDoc+'?updated='+updateTime"></div>
-                    	</md-content>
-                	</div>
-            	</div>
-      </div>
-
+		
+			<document layout="column" layout-padding></document>
+		
 		</md-content>
 
-  <md-fab-speed-dial ng-show="variab" md-open="isOpen" md-direction="up"
-                         ng-class="'md-scale'">
-        <md-fab-trigger>
-          <md-button aria-label="add" class="md-fab">
-			<md-icon class="material-icons md-light">add</md-icon>
-          </md-button>
-        </md-fab-trigger>
-
-        <md-fab-actions>
-          <md-button aria-label="annotate"  ng-click="annotate($event)" class="md-fab md-raised md-mini">
-          	<md-tooltip md-direction="left">
-			Create new annotation
-	            </md-tooltip>
-			<md-icon class="material-icons md-light">message</md-icon>
-          </md-button>
-          <md-button  aria-label="decide"  ng-click="decide($event)"  class="md-fab md-raised md-mini">
-          <md-tooltip md-direction="left">
-          	Insert final decision
-	            </md-tooltip>
-			<md-icon class="material-icons md-light">spellcheck</md-icon>
-          </md-button>
-          <md-button  aria-label="judgment"  ng-click="judge($event)"  class="md-fab md-raised md-mini">
-          <md-tooltip md-direction="left">
-          	Insert overall judgment
-	            </md-tooltip>
-			<md-icon class="material-icons md-light">spellcheck</md-icon>
-          </md-button>
-          <md-button aria-label="save"  ng-click="save($event)" class="md-fab md-raised md-mini">
-			<md-tooltip md-direction="left">
-			Save everything
-				            </md-tooltip>
-			<md-icon class="material-icons md-light">save</md-icon>
-          </md-button>
-        </md-fab-actions>
-      </md-fab-speed-dial>
-
+		<annotator-dial ng-show="variab"></annotator-dial>
+	
 	</div>
 
-	<!-- right sidenav -->
-	<md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
-
-      <md-toolbar class="md-theme-light" layout="row" layout="center center">
-			<div layout="column" class="md-toolbar-tools-bottom inset">
-					<div> {[{ usr.name }]} {[{ usr.surname }]}  <md-button class="md-raised md-primary" ng-click="logout()">Logout</md-button></div>
-					<div>{[{usr.email}]}</div>
-				</div>
-      </md-toolbar>
-    </md-sidenav>
 </div>

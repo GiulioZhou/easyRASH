@@ -117,7 +117,7 @@ var app = angular.module('myApp').factory("annotationService",
     };
 
     function sendScript(script, type, text, sections, url, email){
-      $http.post('wsgi/api/save', {script: script, doc: url, author: email, sections: sections, type: type})
+      $http.post('api/save', {script: script, doc: url, author: email, sections: sections, type: type})
         .success(function (status) {
           dialogService.showSimpleToast(text+" successfully submitted");
         })
@@ -137,6 +137,6 @@ var app = angular.module('myApp').factory("annotationService",
       console.log(ev);
       console.log(status);
 
-      return $http.post('wsgi/api/updateStatus', {paper: paper, ev: ev, status: status});
+      return $http.post('api/updateStatus', {paper: paper, ev: ev, status: status});
     }
 }])

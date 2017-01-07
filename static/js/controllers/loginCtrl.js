@@ -28,39 +28,14 @@ angular.module('myApp').controller("loginController",
 				.then(function () {
 					$scope.disabled = false;
 					$scope.loginForm = {};
-					$window.location.href ="/"
+					$window.location.href ="/";
 				})
 				// handle error
-				.catch(function () {
+				.catch(function (mess) {
 					$scope.error = true;
-					$scope.errorMessage = "Invalid username and/or password";
+					$scope.errorMessage = mess;
 					$scope.disabled = false;
 					$scope.loginForm = {};
-				});
-			};
-
-			$scope.register = function () {
-				console.log("in registration function");
-
-			// initial values
-			$scope.error = false;
-			$scope.disabled = true;
-			// call register from service
-			AuthService.register($scope.regiForm.given_name, $scope.regiForm.family_name,$scope.regiForm.email,
-				$scope.regiForm.password, $scope.regiForm.sex)
-				// handle success
-				.then(function () {
-					console.log("oki!");
-					$location.path('/');
-					$scope.disabled = false;
-					$scope.registerForm = {};
-				})
-				// handle error
-				.catch(function () {
-					$scope.error = true;
-					$scope.errorMessage = "Something went wrong!";
-					$scope.disabled = false;
-					$scope.registerForm = {};
 				});
 			};
 
@@ -68,7 +43,7 @@ angular.module('myApp').controller("loginController",
 		$scope.showAdvanced = function(ev) {
 			$mdDialog.show({
 				controller: DialogController,
-				templateUrl: '../easyRASH/templates/register.html',
+				templateUrl: '../easyRASH/templates/authentication/register.html',
 				parent: angular.element(document.body),
 				targetEvent: ev,
 				clickOutsideToClose:true,

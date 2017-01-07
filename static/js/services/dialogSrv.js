@@ -7,7 +7,8 @@ var app = angular.module('myApp').factory('dialogService',
 		return ({
 			showSimpleToast: showSimpleToast,
 			showAlertDialog: showAlertDialog,
-			showConfirmDialog: showConfirmDialog
+			showConfirmDialog: showConfirmDialog,
+			showAdvancedDialog: showAdvancedDialog
 		});
 
 		function showSimpleToast(text){
@@ -46,5 +47,9 @@ var app = angular.module('myApp').factory('dialogService',
 	    	}, function() {
 				return cancelstatus;		
 	    	});
+	    }
+
+	    function showAdvancedDialog(url){
+	    	
 	    }
 }]);

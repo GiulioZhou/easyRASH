@@ -5,34 +5,82 @@ angular.module('myApp')
 	function(annotationService, AuthService, dialogService, domService, 
 		$scope,$sce,$http,$mdSidenav, $mdDialog, $interval, $timeout){
 
+	//-------- SEND EDITED DATA ---------
+	$scope.changeform={
+ 			given_name: "",
+ 			family_name: "",
+ 			oldemail: "",
+ 			email: "",
+ 			oldpass: "",
+ 			pass: "",
+ 		};
+
+ 	$scope.edit = function(){
+
+ 	}
+
+	//-------- MODIFICA DATI ------------
+	$scope.showAdvanced = function(ev) {
+		$mdDialog.show({
+			controller: DialogController,
+			templateUrl: '../easyRASH/templates/authentication/datachange.html',
+			parent: angular.element(document.body),
+			targetEvent: ev,
+			clickOutsideToClose:true,
+			fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+		});
+	};
+
+	function DialogController($scope, $mdDialog) {
+		$scope.hide = function() {
+			$mdDialog.hide();
+		};
+
+		$scope.cancel = function() {
+			$mdDialog.cancel();
+		};
+
+		$scope.answer = function(answer) {
+			$mdDialog.hide(answer);
+		};
+	}
 
 	//-------- GESTIONE LOGOUT ----------
 	$scope.logout=function(){
 		AuthService.logout();
 	};
 
+	//-------- USER MENU ----------------
+	var originatorEv;
+
+	$scope.openMenu = function($mdOpenMenu, ev){
+		originatorEv = ev;
+		$mdOpenMenu(ev);
+	};
+
 	// ------- GESTIONE UTENTE ----------
 
 	//Carico utenti e documenti
-	 $http.get("wsgi/api/getUser").success(function(data,status,headers,config){
+	 $http.get("api/getUser").success(function(data,status,headers,config){
 		$scope.usr = data;
 	 	$scope.updateDocs();
 	 });
 
 	 // --------- GESTIONE VISUALIZZAZIONE DOC ------------
-	 //Visualizzo pagina di presentazione
- 	$scope.curDoc="../easyRASH/templates/homepage.html";
+	 //Visualizzo pagina di presentazione -> FORSE DA TOGLIERE PERCHè TANTO LA FA POCO PIù GIU
+ 	$scope.curDoc="../easyRASH/templates/document/homepage.html";
 
 	//Aggiorna i documenti
 	$scope.updateDocs=function(){
-		$http.get("wsgi/api/getDocs").success(function(data,status,headers,config){
+		$http.get("api/getDocs").success(function(data,status,headers,config){
 			$scope.documents=data.ret;
 		});
 	};
 
 	$scope.homepage = function(){
-		$scope.curDoc="../easyRASH/templates/homepage.html";
+		$scope.curDoc="../easyRASH/templates/document/homepage.html";
 		$scope.title="easyRASH";
+		$scope.annotatorbutton=false;
 	};
 	$scope.homepage();
 
@@ -54,6 +102,7 @@ angular.module('myApp')
 		if(par=="close"){
 			$mdSidenav('left').close();
 			$scope.curDoc = "../easyRASH/static/papers/"+url;
+			$scope.annotatorbutton=true;
 			$scope.url=url;
 			$scope.role=role;
 			$scope.title=title;
@@ -71,13 +120,13 @@ angular.module('myApp')
 
 			//Conto il numero di reviewer del paper
 			//vorrei fare questo controllo solo se l'user è un chair, però vabbè!
-			$http.get("/wsgi/api/getReviewers", {params: {"url":$scope.url, "event":$scope.ev}})
+			$http.get("api/getReviewers", {params: {"url":$scope.url, "event":$scope.ev}})
 			.success(function(data,status,headers,config){
 				reviewers=data["ret"];	
 			});
 
 
-			
+			//Roba che ha fatto Olga per il mutex
 			if ((url != oldUrl) && (oldUrl != "")) {
 				esci(oldUrl);
 				oldUrl=angular.copy(url);
@@ -91,36 +140,6 @@ angular.module('myApp')
 		else{
 			$mdSidenav('left').toggle();
 		}
-	};
-
-	//Carica e chiude il sidenav di destra
-	$scope.rightMenu = function(par, url) {
-		if(par=="close"){
-			$mdSidenav('right').close();
-		}
-		else{
-			$mdSidenav('right').toggle();
-				$scope.rightUrl = "./yetToSave.html";
-				$scope.classFstButton = "md-raised";
-			/*
-				caricaAnnotazioni(url);
-			*/
-		}
-	};
-
-	$scope.viewAnnot = function(code){
-		switch (code) {
-            case '1':
-                $scope.rightUrl = "./savedAnnot.html"
-								$scope.classFstButton = "";
-								$scope.classSndButton = "md-raised";
-                break;
-            default:
-								$scope.rightUrl = "./yetToSave.html"
-								$scope.classFstButton = "md-raised";
-								$scope.classSndButton = "";
-        }
-
 	};
 
 // -------- GESTIONE COMMENTI ----------
@@ -309,8 +328,6 @@ angular.module('myApp')
 	};
 
     
-//Roba di olga
-
 //----------- GESTIONE ANNOTATOR ------------------
 
 	$scope.buttonText="Annotator";
@@ -356,7 +373,7 @@ angular.module('myApp')
     		
     	}, 1800000); //30 minuti
     	
-		$http({method:'POST', url:"wsgi/api/annotMode", params:{"url": url, "role": role, "usr":$scope.usr.email}})
+		$http({method:'POST', url:"api/annotMode", params:{"url": url, "role": role, "usr":$scope.usr.email}})
 			// handle success
 			.success(function (data, status) {
 
@@ -381,7 +398,7 @@ angular.module('myApp')
   		
   		$interval.cancel(timer);
   		
-  		$http({method:'POST', url:'wsgi/api/esci', params:{"url": url}})
+  		$http({method:'POST', url:'api/esci', params:{"url": url}})
   		// handle success
   		.success(function (data, status) {
 
@@ -405,15 +422,3 @@ angular.module('myApp')
 
 
 }]);
-
-angular.module('myApp').directive('savedAnnot', function() {
-  return {
-    templateUrl: './easyRASH/templates/savedAnnot.html'
-  };
-});
-
-angular.module('myApp').directive('yetToSave', function() {
-  return {
-    templateUrl: './easyRASH/templates/yetToSave.html'
-  };
-});

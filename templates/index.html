@@ -1,45 +1,44 @@
 <html lang="en" >
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Angular Material style sheet -->
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
-  <link rel="stylesheet" href="../easyRASH/static/css/app.css">
+		<!-- Angular Material style sheet -->
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+		<link rel="stylesheet" href="../easyRASH/static/css/app.css">
 
-  <!-- Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-</head>
+	</head>
+	
+	<body ng-app="myApp"  ng-cloak>
 
+		<div ng-view></div>
+	
+		<!-- Angular Material requires Angular.js Libraries -->
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-sanitize.js"></script>
+		
+		<!-- Angular Material Library -->
+		<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+		
+		<!-- Angular application, controllers and services -->
+		<script src="../easyRASH/static/js/app.js"></script>  
+		<script src="../easyRASH/static/js/appDirectives.js"></script>
+		<script src="../easyRASH/static/js/controllers/registrationCtrl.js"></script>
+		<script src="../easyRASH/static/js/controllers/loginCtrl.js"></script>
+		<script src="../easyRASH/static/js/controllers/documentCtrl.js"></script>
+		<script src="../easyRASH/static/js/controllers/annotationCtrl.js"></script>
+		<script src="../easyRASH/static/js/services/authService.js"></script>
+		<script src="../easyRASH/static/js/services/usrService.js"></script>
+		<script src="../easyRASH/static/js/services/annotationSrv.js"></script>
+		<script src="../easyRASH/static/js/services/dialogSrv.js"></script>
+		<script src="../easyRASH/static/js/services/domSrv.js"></script>
 
-<body ng-app="myApp"  ng-cloak>
+	</body>
 
-
-	<div ng-view></div>
-
-
-  <!-- Angular Material requires Angular.js Libraries -->
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-sanitize.js"></script>
-
-  <!-- Angular Material Library -->
-  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
-
-  <!-- Angular application, controllers and services -->
-  <script src="../easyRASH/static/js/app.js"></script>
-  <script src="../easyRASH/static/js/controllers/registrationCtrl.js"></script>
-  <script src="../easyRASH/static/js/controllers/loginCtrl.js"></script>
-  <script src="../easyRASH/static/js/controllers/documentCtrl.js"></script>
-  <script src="../easyRASH/static/js/controllers/annotationCtrl.js"></script>
-  <script src="../easyRASH/static/js/services/authService.js"></script>
-  <script src="../easyRASH/static/js/services/usrService.js"></script>
-  <script src="../easyRASH/static/js/services/annotationSrv.js"></script>
-  <script src="../easyRASH/static/js/services/dialogSrv.js"></script>
-  <script src="../easyRASH/static/js/services/domSrv.js"></script>
-</body>
 </html>

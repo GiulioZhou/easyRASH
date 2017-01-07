@@ -11,8 +11,6 @@ angular.module('myApp').controller("regiController", ['$scope','$location', 'Aut
  		};
 
 			$scope.register = function () {
-				console.log("in registration function");
-
 			// initial values
 			$scope.error = false;
 			$scope.disabled = true;
@@ -21,15 +19,15 @@ angular.module('myApp').controller("regiController", ['$scope','$location', 'Aut
 				$scope.regiForm.password, $scope.regiForm.sex)
 				// handle success
 				.then(function () {
-					console.log("oki!");
-					$location.path('/');
 					$scope.disabled = false;
 					$scope.registerForm = {};
+					$scope.error = true;
+					$scope.errorMessage = "Registration completed! Check your emails and verify your account!";
 				})
 				// handle error
-				.catch(function () {
+				.catch(function (mess) {
 					$scope.error = true;
-					$scope.errorMessage = "Something went wrong!";
+					$scope.errorMessage = mess;
 					$scope.disabled = false;
 					$scope.registerForm = {};
 				});

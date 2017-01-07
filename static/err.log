@@ -90,3 +90,185 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
     raise BadRequestKeyError(key)
 BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request
+ERROR:root:exception
+Traceback (most recent call last):
+  File "/home/web/andrian.leah/html/easyRASH/annotatorMode.py", line 25, in annotMode
+    key = request.args["url"]
+  File "/usr/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 353, in __getitem__
+    raise BadRequestKeyError(key)
+BadRequestKeyError: 400: Bad Request

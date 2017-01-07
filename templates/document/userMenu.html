@@ -1,0 +1,26 @@
+<md-menu md-position-mode="target-right target" md-offset="0 60">
+				
+	<md-button class="md-icon-button" aria-label="User Menu" ng-click="openMenu($mdOpenMenu, $event)">
+		<md-icon class="mterial-icons md-light">account_circle</md-icon>
+	</md-button>
+	
+	<md-menu-content layout-align="center center">
+			
+		<md-menu-item>
+			<span class="md-headline">{[{ usr.name }]} {[{ usr.surname }]}</span>
+		</md-menu-item>
+			
+		<md-menu-item>
+			<span class="md-subhead">{[{usr.email}]}</span>
+		</md-menu-item>
+		
+		<md-menu-item>
+			<div layout="row">
+				<md-button class="md-accent md-raised md-no-focus" ng-click="showAdvanced($event)">Edit</md-button>
+				<md-button class="md-flat md-warn" ng-click="logout()">Log Out</md-button>
+			</div>
+		</md-menu-item>
+				 	
+	</md-menu-content>
+
+</md-menu>

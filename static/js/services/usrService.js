@@ -1,3 +1,5 @@
+//Roba che voleva fare sara ma non ci è riuscita -> Vedo se riesco ad aggiustare altrimenti da cestinare
+
 var app = angular.module('myApp').service('usrService', function($http) {
 	
 	var _usr={};

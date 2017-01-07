@@ -30,22 +30,22 @@ var app = angular.module('myApp').factory('AuthService',
 			// create a new instance of deferred
 			var deferred = $q.defer();
 			// send a post request to the server
-			$http.post('wsgi/api/login', {email: email, pass: password})
+			$http.post('api/login', {email: email, pass: password})
 				// handle success
 				.success(function (data, status) {
-					if(status === 200 && data.result){
+					if(status === 200 && data.result===true){
 						user = true;
 						deferred.resolve();
-						console.log(data.result);
 					} else {
+						console.log(data.result);
 						user = false;
-						deferred.reject();
+						deferred.reject(data.result);
 					}
 				})
 				// handle error
 				.error(function (data) {
 					user = false;
-					deferred.reject();
+					deferred.reject("You've met a terrible fate, haven't you?");
 				});
 
 			// return promise object
@@ -59,7 +59,7 @@ var app = angular.module('myApp').factory('AuthService',
 			var deferred = $q.defer();
 
 			// send a get request to the server
-			$http.get('wsgi/api/logout')
+			$http.get('api/logout')
 				// handle success
 				.success(function (data) {
 					user = false;
@@ -82,7 +82,7 @@ var app = angular.module('myApp').factory('AuthService',
 			// create a new instance of deferred
 			var deferred = $q.defer();
 			// send a post request to the server
-			$http.post('wsgi/api/register', { given_name: given_name,
+			$http.post('api/register', { given_name: given_name,
 				family_name: family_name,
 				email: email,
 				pass: pass,
@@ -90,20 +90,15 @@ var app = angular.module('myApp').factory('AuthService',
 			})
 				// handle success
 				.success(function (data, status) {
-					if(status === 200 && data.result){
-						console.log(data.result);
-						console.log("utente registrato");
+					if(status === 200 && data.result===true){
 						deferred.resolve();
 					} else {
-						console.log(data.result);
-						console.log("utente non registrato");
-						deferred.reject();
+						deferred.reject("This user is already registered!");
 					}
 				})
 				// handle error
 				.error(function (data) {
-					console.log("errore");
-					deferred.reject();
+					deferred.reject("You've met a terrible fate, haven't you?");
 				});
 			// return promise object
 			return deferred.promise;
@@ -112,7 +107,7 @@ var app = angular.module('myApp').factory('AuthService',
 
 
 		function getUserStatus() {
-			return $http.get('wsgi/api/status')
+			return $http.get('api/status')
 		      // handle success
 		      .success(function (data) {
 		      	if(data.status){

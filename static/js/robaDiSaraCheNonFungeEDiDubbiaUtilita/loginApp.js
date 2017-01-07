@@ -9,7 +9,7 @@ alert('ciao');
 
  $routeProvider
  .when('/login', {
-   templateUrl: '../easyRASH/templates/loginPage.html',
+   templateUrl: '../easyRASH/templates/authentication/loginPage.html',
    controller: 'loginController',
    restricted: false
  });

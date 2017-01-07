@@ -1,3 +1,5 @@
+//Questo controller non funziona ancora! Queste funzioni sono tutte in documentCtrl per ora -> Vedo se riuscirò a separare i controller
+
 angular.module('myApp')
 	.controller("annotController",["commentSrv", "userSrv", "$scope","$sce","$http",
 		function(commentSrv, userSrv, $scope, $sce, $http){

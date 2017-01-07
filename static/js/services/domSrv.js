@@ -1,4 +1,5 @@
-//define dialog and toast service
+//Servizio per modificare e ottenere informazioni del DOM
+
 var app = angular.module('myApp').factory('domService',
 	['$mdDialog', "$mdToast",
 	function ($mdDialog, $mdToast) {
