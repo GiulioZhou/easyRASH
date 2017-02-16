@@ -342,12 +342,7 @@ angular.module('myApp')
                     
                     oldId = id;
                     
-                    $mdToast.show({
-	                    hideDelay: 0 ,
-					 	position    : 'bottom right',
-					 	templateUrl : '/easyRASH/templates/document/annotationToast.html'
-					});
-					
+             
 					var toast = $mdToast.simple()
 					  .textContent($scope.content)
 					  .action('CLOSE')
