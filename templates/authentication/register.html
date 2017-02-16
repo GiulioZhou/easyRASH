@@ -1,44 +1,37 @@
 <md-dialog class="md-whiteframe-16dp" flex="60" flex-xs="80" flex-sm="70" ng-controller="regiController">
-	<md-dialog-content layout-padding>
-		<div ng-if="error" id="error">
-			<b layout="row" layout-align="center center" class="md-padding">{[{errorMessage}]}</b>
-		</div>
-
-		<form name="myForm" ng-submit="register()">
-			<div layout-gt-xs="row">
-				<md-input-container class="md-block" flex-gt-xs>
-					<label>First Name</label>
-					<input ng-model="regiForm.given_name" required>
-				</md-input-container>
-
-				<md-input-container class="md-block" flex-gt-xs>
-					<label>Last Name</label>
-					<input ng-model="regiForm.family_name" required>
-				</md-input-container>
-			</div>
-
-			<div layout="column">
-				<md-input-container class="md-block">
-					<label>Email</label>
-					<input ng-model="regiForm.email" type="email" required>
-				</md-input-container>
-
-				<md-input-container class="md-block">
-					<label>Password</label>
-					<input ng-model="regiForm.password" type="password" required>
-				</md-input-container>
-			</div>
-	
-			<md-radio-group ng-model="regiForm.sex" layout="row" layout-align="center center" class="md-padding" ng-required="true">
-				<md-radio-button value="Male"> Male </md-radio-button>
-				<md-radio-button value="Female"> Female </md-radio-button>
-				<md-radio-button value="Banana"> Banana </md-radio-button>
-			</md-radio-group>
-
-			<div layout="column">
-				<md-button type="submit" class="md-raised md-accent md-fab-button" ng-disabled="myForm.$invalid"> Register </md-button>
-			</div>
-
-		</form>
-	</md-dialog-content>
+    <md-dialog-content layout-padding>
+        <div ng-if="error" id="error">
+            <b layout="row" layout-align="center center" class="md-padding">{[{errorMessage}]}</b>
+        </div>
+        <form name="myForm" ng-submit="register()">
+            <div layout-gt-xs="row">
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>First Name</label>
+                    <input ng-model="regiForm.given_name" required>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>Last Name</label>
+                    <input ng-model="regiForm.family_name" required>
+                </md-input-container>
+            </div>
+            <div layout="column">
+                <md-input-container class="md-block">
+                    <label>Email</label>
+                    <input ng-model="regiForm.email" type="email" required>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Password</label>
+                    <input ng-model="regiForm.password" type="password" required>
+                </md-input-container>
+            </div>
+            <md-radio-group ng-model="regiForm.sex" layout="row" layout-align="center center" class="md-padding" ng-required="true">
+                <md-radio-button value="Male"> Male </md-radio-button>
+                <md-radio-button value="Female"> Female </md-radio-button>
+                <md-radio-button value="Banana"> Banana </md-radio-button>
+            </md-radio-group>
+            <div layout="column">
+                <md-button type="submit" class="md-raised md-accent md-fab-button" ng-disabled="myForm.$invalid"> Register </md-button>
+            </div>
+        </form>
+    </md-dialog-content>
 </md-dialog>

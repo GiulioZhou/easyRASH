@@ -1,0 +1,140 @@
+<section layout="column">
+<h1><md-icon class="material-icons">menu</md-icon> Main Menu</h1>
+
+	<h3>Events</h3>
+	<p>
+		Once you'll open the navigation menu you'll be able to find all your papers organized by event, with all the informations you need, as you can see below:
+	</p>
+	<div layout-padding layout-margin>
+		<md-subheader class="md-primary">Event Name</md-subheader>
+		<md-list>
+			<md-list-item class="md-2-line md-button">
+				<div class="md-list-item-text nav-but">
+					<h3 class="no-before">Paper Title</h3>
+					<p>Your role for this paper</p>
+					<span> Status of this paper</span>
+				</div>
+			</md-list-item>
+		</md-list>
+	</div>
+
+	<h3>Annotations</h3>
+	<p>
+		When you'll open a paper another tab will appear where you'll have all the annotations regarding that paper with different options per annotation:
+	</p>
+	<div layout-padding layout-margin>
+		<md-list>
+			<md-item>
+				<md-item-content>
+				<div>
+					<h4><md-icon class="material-icons">delete_forever</md-icon> Remove</h4>
+					<p>Completly remove an annotation, without the possibility to undo the change. You can remove only your annotations.</p>
+				</div>
+				<md-divider></md-divider>
+				</md-item-content>
+			</md-item>
+			<md-item>
+				<md-item-content>
+				<div>
+					<h4><md-icon class="material-icons">mode_edit</md-icon> Edit</h4>
+					<p>Change an annotation. As for the remove you'll onlybe able to edit your annotations.</p>
+				</div>
+				<md-divider></md-divider>
+				</md-item-content>
+			</md-item>
+			<md-item>
+				<md-item-content>
+				<div>
+					<h4><md-icon class="material-icons">description</md-icon> View</h4>
+					<p>When you'll click view the menu will close and you'll be redirected to the portion of the paper relative to that annotation. You'll still be able to read the annotation on the bottom of your screen.</p>
+				</div>
+				</md-item-content>
+			</md-item>
+		</md-list>
+	</div>
+
+<h1><md-icon class="mterial-icons">account_circle</md-icon> User Menu</h1>
+	<h3>Change Account Information</h3>
+	<p>
+		Once you'll click the Edit button inside your user menu a new window will show. There you'll be able to chage some or all your account informations.
+	</p>
+	<p>
+		If you want to abort the changes just press the "esc" key or click outside the edit window.
+	</p>
+	<p>
+		If you want to confirm the changes, click <md-button class="md-accent md-raised">Confirm</md-button> and a pop up will show you if the changes will be done or not. 
+	</p>
+
+<h1>Review a Paper</h1>
+	<p>
+		To create an annotation or to insert a final decision to a paper you'll need to enter the <md-button class="md-flat" aria-label="Annotator Mode">ANNOTATOR</md-button> mode by clicking this button on the top right of your screen near the user menu.
+	</p>
+	<p>
+		Once you'll enter ANNOTATOR mode the button will switch to <md-button class="md-flat" aria-label="Annotator Mode">READER</md-button> and <md-button class="md-fab md-mini"><md-icon class="material-icons md-light">add</md-icon></md-button> will appear on the bottom right of your screen.
+	</p>
+	
+	<div layout-padding layout-margin>
+		<md-list>
+			<md-subheader class="md-primary">As a CHAIR you'll be able to:</md-subheader>
+			<md-item>
+				<md-item-content>
+				<div>
+					<h4><md-icon class="material-icons">message</md-icon> Create a new annotation</h4>
+					<p>Before adding a new annotation you'll first have to select the part of the text relative to your annotation. A new window will show where you'll be able to add your annotation. Note that you can only annotate one paragraph at a time</p>
+				</div>
+				<md-divider></md-divider>
+				</md-item-content>
+			</md-item>
+			<md-item>
+				<md-item-content>
+				<div>
+					<h4><md-icon class="material-icons">done_all</md-icon> Insert final decision</h4>
+					<p>As a chair you'll be able to decide if the paper is ACCEPTED or REJECTED.</p>
+				</div>
+				<md-divider></md-divider>
+				</md-item-content>
+			</md-item>
+			<md-item>
+				<md-item-content>
+				<div>
+					<h4><md-icon class="material-icons">save</md-icon> Save Everything is IMPORTANT!</h4>
+					<p>All the changes are partial. To validate them permanently you'll need to save them all by clicking this button before exiting the ANNOTATOR mode.</p>
+				</div>
+				</md-item-content>
+			</md-item>
+		</md-list>
+	</div>
+
+	<div layout-padding layout-margin>
+		<md-list>
+			<md-subheader class="md-primary">As a REVIEWER you'll be able to:</md-subheader>
+			<md-item>
+				<md-item-content>
+				<div>
+					<h4><md-icon class="material-icons">message</md-icon> Create a new annotation</h4>
+					<p>Before adding a new annotation you'll first have to select the part of the text relative to your annotation. A new window will show where you'll be able to add your annotation. Note that you can only annotate one paragraph at a time</p>
+				</div>
+				<md-divider></md-divider>
+				</md-item-content>
+			</md-item>
+			<md-item>
+				<md-item-content>
+				<div>
+					<h4><md-icon class="material-icons">done</md-icon> Insert overall judgment</h4>
+					<p>Same as for the Chair you'll be able to chose if the paper is ACCEPTED or REJECTED but your decision as a Reviewer will not be definitive.</p>
+				</div>
+				<md-divider></md-divider>
+				</md-item-content>
+			</md-item>
+			<md-item>
+				<md-item-content>
+				<div>
+					<h4><md-icon class="material-icons">save</md-icon> Save Everything is IMPORTANT!</h4>
+					<p>All the changes are partial. To validate them permanently you'll need to save them all by clicking this button before exiting the ANNOTATOR mode.</p>
+				</div>
+				</md-item-content>
+			</md-item>
+		</md-list>
+	</div>	
+
+</section>

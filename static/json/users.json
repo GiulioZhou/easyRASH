@@ -1,1 +1,226 @@
-{"Silvio Peroni <silvio.peroni@unibo.it>": {"family_name": "Peroni", "confirmed": true, "sex": "male", "given_name": "Silvio", "pass": "silvio.peroni", "email": "silvio.peroni@unibo.it"}, "Alice Liddell <alice.liddell@whiterabbit.com>": {"family_name": "Liddell", "confirmed": true, "sex": "female", "given_name": "Alice", "pass": "alice.liddell", "email": "alice.liddell@whiterabbit.com"}, "Jessica Jones <jessica.jones@alias.com>": {"family_name": "Jones", "confirmed": true, "sex": "female", "given_name": "Jessica", "pass": "jessica.jones", "email": "jessica.jones@alias.com"}, "Anastasia Dimou <anastasia.dimou@example.com>": {"family_name": "Dimou", "confirmed": true, "sex": "female", "given_name": "Anastasia", "pass": "anastasia.dimou", "email": "anastasia.dimou@example.com"}, "Lyra Belacqua <lyra.belacqua@ox.com>": {"family_name": "Belacqua", "confirmed": true, "sex": "female", "given_name": "Lyra", "pass": "lyra.belacqua", "email": "lyra.belacqua@ox.com"}, "Sahar Vahdati <vahdati@example.com>": {"family_name": "Vahdati", "confirmed": true, "sex": "female", "given_name": "Sahar", "pass": "vahdati", "email": "vahdati@example.com"}, "Michael Smith <mike@example.com>": {"family_name": "Smith", "confirmed": true, "sex": "male", "given_name": "Michael", "pass": "mike", "email": "mike@example.com"}, "Paolo Manghi <paolo.manghi@example.com>": {"family_name": "Manghi", "confirmed": true, "sex": "male", "given_name": "Paolo", "pass": "paolo.manghi", "email": "paolo.manghi@example.com"}, "Arthur Dent <arthur.dent@fish.com>": {"family_name": "Dent", "confirmed": true, "sex": "male", "given_name": "Arthur", "pass": "arthur.dent", "email": "arthur.dent@fish.com"}, "Giulio Zhou <giuliozhou@gmail.com>": {"family_name": "Zhou", "confirmed": true, "sex": "Male", "given_name": "Giulio", "pass": "Ciao", "email": "giuliozhou@gmail.com"}, "Alejandra Gonzalez-Beltran <alejandra.gonzalezbeltran@example.com>": {"family_name": "Gonzalez-Beltran", "confirmed": true, "sex": "female", "given_name": "Alejandra", "pass": "alejandra.gonzalezbeltran", "email": "alejandra.gonzalezbeltran@example.com"}, "Francesco Osborne <francesco.osborne@example.com>": {"family_name": "Osborne", "confirmed": true, "sex": "male", "given_name": "Francesco", "pass": "francesco.osborne", "email": "francesco.osborne@example.com"}, "Francesco Poggi <francesco.poggi5@unibo.it>": {"family_name": "Poggi", "confirmed": true, "sex": "male", "given_name": "Francesco", "pass": "francesco.poggi5", "email": "francesco.poggi5@unibo.it"}, "Paul Groth <p.groth@example.com>": {"family_name": "Groth", "confirmed": true, "sex": "male", "given_name": "Paul", "pass": "p.groth", "email": "p.groth@example.com"}, "Raffaele Giannella <raffaele.giannella@example.com>": {"family_name": "Giannella", "confirmed": true, "sex": "male", "given_name": "Raffaele", "pass": "raffaele.giannella", "email": "raffaele.giannella@example.com"}, "Alessia Bardi <alessia.bardi@example.com>": {"family_name": "Bardi", "confirmed": true, "sex": "female", "given_name": "Alessia", "pass": "alessia.bardi", "email": "alessia.bardi@example.com"}, "Andrea Nuzzolese <andrea.nuzzolese@example.com>": {"family_name": "Nuzzolese", "confirmed": true, "sex": "male", "given_name": "Andrea", "pass": "andrea.nuzzolese", "email": "andrea.nuzzolese@example.com"}, "Tobias Kuhn <tokuhn@example.com>": {"family_name": "Kuhn", "confirmed": true, "sex": "male", "given_name": "Tobias", "pass": "tokuhn", "email": "tokuhn@example.com"}, "Angelo Di Iorio <angelo.diiorio@unibo.it>": {"family_name": "Di Iorio", "confirmed": true, "sex": "male", "given_name": "Angelo", "pass": "angelo.diiorio", "email": "angelo.diiorio@unibo.it"}, "Christoph Lange <math.semantic.web@example.com>": {"family_name": "Lange", "confirmed": true, "sex": "male", "given_name": "Christoph", "pass": "math.semantic.web", "email": "math.semantic.web@example.com"}, "Alex Wade <alex.wade@example.com>": {"family_name": "Wade", "confirmed": true, "sex": "male", "given_name": "Alex", "pass": "alex.wade", "email": "alex.wade@example.com"}, "John Constantine <john.constantine@hell.com>": {"family_name": "Constantine", "confirmed": true, "sex": "male", "given_name": "John", "pass": "john.constantine", "email": "john.constantine@hell.com"}, "Fabio Vitali <fabio.vitali@unibo.it>": {"family_name": "Vitali", "confirmed": true, "sex": "male", "given_name": "Fabio", "pass": "fabio.vitali", "email": "fabio.vitali@unibo.it"}, "Paolo Ciancarini <paolo.ciancarini@example.com>": {"family_name": "Ciancarini", "confirmed": true, "sex": "male", "given_name": "Paolo", "pass": "paolo.ciancarini", "email": "paolo.ciancarini@example.com"}, "Arabella Strange <arabella.strange@york.com>": {"family_name": "Strange", "confirmed": true, "sex": "female", "given_name": "Arabella", "pass": "arabella.strange", "email": "arabella.strange@york.com"}, "Jun Zhao <j.zhao5@example.com>": {"family_name": "Zhao", "confirmed": true, "sex": "female", "given_name": "Jun", "pass": "j.zhao5", "email": "j.zhao5@example.com"}, "Vanessa Ives <vanessa.ives@hell.com>": {"family_name": "Ives", "confirmed": true, "sex": "female", "given_name": "Vanessa", "pass": "vanessa.ives", "email": "vanessa.ives@hell.com"}}
+{
+    "Silvio Peroni <silvio.peroni@unibo.it>": {
+        "family_name": "Peroni", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Silvio", 
+        "pass": "silvio.peroni", 
+        "email": "silvio.peroni@unibo.it"
+    }, 
+    "Alice Liddell <alice.liddell@whiterabbit.com>": {
+        "family_name": "Liddell", 
+        "confirmed": true, 
+        "sex": "female", 
+        "given_name": "Alice", 
+        "pass": "alice.liddell", 
+        "email": "alice.liddell@whiterabbit.com"
+    }, 
+    "Jessica Jones <jessica.jones@alias.com>": {
+        "family_name": "Jones", 
+        "confirmed": true, 
+        "sex": "female", 
+        "given_name": "Jessica", 
+        "pass": "jessica.jones", 
+        "email": "jessica.jones@alias.com"
+    }, 
+    "Anastasia Dimou <anastasia.dimou@example.com>": {
+        "family_name": "Dimou", 
+        "confirmed": true, 
+        "sex": "female", 
+        "given_name": "Anastasia", 
+        "pass": "anastasia.dimou", 
+        "email": "anastasia.dimou@example.com"
+    }, 
+    "Lyra Belacqua <lyra.belacqua@ox.com>": {
+        "family_name": "Belacqua", 
+        "confirmed": true, 
+        "sex": "female", 
+        "given_name": "Lyra", 
+        "pass": "lyra.belacqua", 
+        "email": "lyra.belacqua@ox.com"
+    }, 
+    "Sahar Vahdati <vahdati@example.com>": {
+        "family_name": "Vahdati", 
+        "confirmed": true, 
+        "sex": "female", 
+        "given_name": "Sahar", 
+        "pass": "vahdati", 
+        "email": "vahdati@example.com"
+    }, 
+    "Michael Smith <mike@example.com>": {
+        "family_name": "Smith", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Michael", 
+        "pass": "mike", 
+        "email": "mike@example.com"
+    }, 
+    "Paolo Manghi <paolo.manghi@example.com>": {
+        "family_name": "Manghi", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Paolo", 
+        "pass": "paolo.manghi", 
+        "email": "paolo.manghi@example.com"
+    }, 
+    "Arthur Dent <arthur.dent@fish.com>": {
+        "family_name": "Dent", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Arthur", 
+        "pass": "arthur.dent", 
+        "email": "arthur.dent@fish.com"
+    }, 
+    "Giulio Zhou <giuliozhou@gmail.com>": {
+        "family_name": "Zhou", 
+        "confirmed": false, 
+        "sex": "Banana", 
+        "given_name": "Giulio", 
+        "pass": "banana", 
+        "email": "giuliozhou@gmail.com"
+    }, 
+    "Alejandra Gonzalez-Beltran <alejandra.gonzalezbeltran@example.com>": {
+        "family_name": "Gonzalez-Beltran", 
+        "confirmed": true, 
+        "sex": "female", 
+        "given_name": "Alejandra", 
+        "pass": "alejandra.gonzalezbeltran", 
+        "email": "alejandra.gonzalezbeltran@example.com"
+    }, 
+    "Francesco Osborne <francesco.osborne@example.com>": {
+        "family_name": "Osborne", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Francesco", 
+        "pass": "francesco.osborne", 
+        "email": "francesco.osborne@example.com"
+    }, 
+    "Francesco Poggi <francesco.poggi5@unibo.it>": {
+        "family_name": "Poggi", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Francesco", 
+        "pass": "francesco.poggi5", 
+        "email": "francesco.poggi5@unibo.it"
+    }, 
+    "Paul Groth <p.groth@example.com>": {
+        "family_name": "Groth", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Paul", 
+        "pass": "p.groth", 
+        "email": "p.groth@example.com"
+    }, 
+    "Raffaele Giannella <raffaele.giannella@example.com>": {
+        "family_name": "Giannella", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Raffaele", 
+        "pass": "raffaele.giannella", 
+        "email": "raffaele.giannella@example.com"
+    }, 
+    "Alessia Bardi <alessia.bardi@example.com>": {
+        "family_name": "Bardi", 
+        "confirmed": true, 
+        "sex": "female", 
+        "given_name": "Alessia", 
+        "pass": "alessia.bardi", 
+        "email": "alessia.bardi@example.com"
+    },  
+    "Andrea Nuzzolese <andrea.nuzzolese@example.com>": {
+        "family_name": "Nuzzolese", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Andrea", 
+        "pass": "andrea.nuzzolese", 
+        "email": "andrea.nuzzolese@example.com"
+    }, 
+    "Tobias Kuhn <tokuhn@example.com>": {
+        "family_name": "Kuhn", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Tobias", 
+        "pass": "tokuhn", 
+        "email": "tokuhn@example.com"
+    }, 
+    "Angelo Di Iorio <angelo.diiorio@unibo.it>": {
+        "family_name": "Di Iorio", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Angelo", 
+        "pass": "angelo.diiorio", 
+        "email": "angelo.diiorio@unibo.it"
+    }, 
+    "Christoph Lange <math.semantic.web@example.com>": {
+        "family_name": "Lange", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Christoph", 
+        "pass": "math.semantic.web", 
+        "email": "math.semantic.web@example.com"
+    }, 
+    "Alex Wade <alex.wade@example.com>": {
+        "family_name": "Wade", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Alex", 
+        "pass": "alex.wade", 
+        "email": "alex.wade@example.com"
+    }, 
+    "Giulio Zhou <giuliozhou@me.com>": {
+        "family_name": "Zhou", 
+        "confirmed": true, 
+        "sex": "Banana", 
+        "given_name": "Giulio", 
+        "pass": "banana", 
+        "email": "giuliozhou@me.com"
+    }, 
+    "John Constantine <john.constantine@hell.com>": {
+        "family_name": "Constantine", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "John", 
+        "pass": "john.constantine", 
+        "email": "john.constantine@hell.com"
+    }, 
+    "Fabio Vitali <fabio.vitali@unibo.it>": {
+        "family_name": "Vitali", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Fabio", 
+        "pass": "fabio.vitali", 
+        "email": "fabio.vitali@unibo.it"
+    }, 
+    "Paolo Ciancarini <paolo.ciancarini@example.com>": {
+        "family_name": "Ciancarini", 
+        "confirmed": true, 
+        "sex": "male", 
+        "given_name": "Paolo", 
+        "pass": "paolo.ciancarini", 
+        "email": "paolo.ciancarini@example.com"
+    }, 
+    "Arabella Strange <arabella.strange@york.com>": {
+        "family_name": "Strange", 
+        "confirmed": true, 
+        "sex": "female", 
+        "given_name": "Arabella", 
+        "pass": "arabella.strange", 
+        "email": "arabella.strange@york.com"
+    }, 
+    "Jun Zhao <j.zhao5@example.com>": {
+        "family_name": "Zhao", 
+        "confirmed": true, 
+        "sex": "female", 
+        "given_name": "Jun", 
+        "pass": "j.zhao5", 
+        "email": "j.zhao5@example.com"
+    }, 
+    "Vanessa Ives <vanessa.ives@hell.com>": {
+        "family_name": "Ives", 
+        "confirmed": true, 
+        "sex": "female", 
+        "given_name": "Vanessa", 
+        "pass": "vanessa.ives", 
+        "email": "vanessa.ives@hell.com"
+    }
+}

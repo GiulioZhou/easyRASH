@@ -1,0 +1,32 @@
+
+
+<div layout="column" layout-padding ng-repeat="event in documents" ng-show="isHome">
+				
+    <div layout="row" layout-padding layout-align="center center" >
+        <div flex-gt-xs="90" flex-gt-md="80" resize-frame>
+                <md-content class="md-whiteframe-8dp">
+					<md-toolbar layout-padding>
+		                <div class="md-toolbar-tools" class="title">
+								{[{event.name}]}
+		                </div>
+					</md-toolbar>	
+                </md-content>
+		
+        </div>
+   	</div>
+	<div layout="row" layout-padding layout-align="center center" ng-repeat="doc in event.docs">
+        <div flex-gt-xs="90" flex-gt-md="80" resize-frame>
+                <md-content id="docCard" md-whiteframe="{{height}}" ng-mouseenter="height = 16" ng-mouseleave="height = 8"  ng-init="height = 8">
+                    <div layout-padding class="title">
+						<div  style="cursor: pointer; font-size:11pt;" ng-click="leftMenu('close', doc.url, doc.role, doc.title, event.name, doc.status, doc.roleFlag[0], doc.roleFlag[1], doc.roleFlag[2])">
+		   
+							<h4 style="font-weight:normal;" class="no-before">{[{ doc.title }]}</h4>
+							<p>Role: {[{doc.role}]}</p>
+							<span> Status:</span><span ng-style="statusColor(doc.status)">  {[{doc.status}]}</span>
+						</div>
+                    </div>
+                </md-content>
+		
+        </div>
+   </div>
+</div>

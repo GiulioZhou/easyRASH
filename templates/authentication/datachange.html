@@ -1,55 +1,43 @@
-<md-dialog ng-controller="documentController">
+<md-dialog ng-controller="editDataController">
     <md-dialog-content>
-      <div class="md-dialog-content">
-      	<form>
-      	<div layout="column">
-      		<md-button class="md-primary btn1" ng-click="showme=true; editname=!editname">Edit Name</md-button>
-      	</div>
-
-	      	<div layout="row" ng-show="editname">
-		      	<md-input-container class="md-block">
-		            <label>First name</label>
-		            <input placeholder="{[{usr.name}]}" ng-model="changeform.given_name">
-		          </md-input-container>
-
-		          <md-input-container class="md-block">
-		            <label>Surname</label>
-		            <input placeholder="{[{usr.surname}]}" ng-model="changeform.family_name">
-		          </md-input-container>
-	        </div>
-	        
-      	<div layout="column">
-      		<md-button class="md-primary btn1" ng-click="showme=true; editmail=!editmail">Edit Email</md-button>
-      	</div>
-      	    
-	        <div layout="row" ng-show="editmail">
-		        <md-input-container class="md-block">
-		          <input placeholder="Current email" type="email" ng-model="changeform.oldemail">
-		        </md-input-container>
-
-		        <md-input-container md-no-float class="md-block">
-		          <input placeholder="New email" type="email" ng-model="changeform.email">
-		        </md-input-container>
-	        </div>
-
-       	<div layout="column">
-      		<md-button class="md-primary btn1" ng-click="showme=true; editpass=!editpass">Edit Password</md-button>
-      	</div>
-
-	        <div layout="row" ng-show="editpass">
-		        <md-input-container class="md-block">
-		          <input placeholder="Current password" ng-model="changepass">
-		        </md-input-container>
-
-		        <md-input-container md-no-float class="md-block">
-		          <input placeholder="New password" ng-model="changeform.pass">
-		        </md-input-container>
-	        </div>
-	    </form>
-        <div layout="column" ng-show="showme">
-      		<md-button class="md-accent md-raised" ng-click="Send()">Confirm</md-button>
-      	</div>
-      	
-      </div>
+        <div class="md-dialog-content">
+            <form>
+                <div layout="column">
+                    <md-button class="md-primary btn1" ng-click="showme=true; editname=!editname">Edit Name</md-button>
+                </div>
+                <div layout="row" ng-show="editname">
+                    <md-input-container class="md-block">
+                        <label>First name</label>
+                        <input placeholder="{[{usr.name}]}" ng-model="changeform.given_name">
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>Surname</label>
+                        <input placeholder="{[{usr.surname}]}" ng-model="changeform.family_name">
+                    </md-input-container>
+                </div>
+                <div layout="column">
+                    <md-button class="md-primary btn1" ng-click="showme=true; editmail=!editmail">Edit Email</md-button>
+                </div>
+                <div layout="column" ng-show="editmail">
+                    <md-input-container md-no-float class="md-block">
+                        <input placeholder="New email" type="email" ng-model="changeform.email">
+                    </md-input-container>
+                </div>
+                <div layout="column">
+                    <md-button class="md-primary btn1" ng-click="showme=true; editpass=!editpass">Edit Password</md-button>
+                </div>
+                <div layout="row" ng-show="editpass">
+                    <md-input-container class="md-block">
+                        <input placeholder="Current password" ng-model="changeform.changepass">
+                    </md-input-container>
+                    <md-input-container md-no-float class="md-block">
+                        <input placeholder="New password" ng-model="changeform.pass">
+                    </md-input-container>
+                </div>
+            </form>
+            <div layout="column" ng-show="showme">
+                <md-button class="md-accent md-raised" ng-click="EditData()">Confirm</md-button>
+            </div>
+        </div>
     </md-dialog-content>
 </md-dialog>

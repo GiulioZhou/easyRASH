@@ -1,19 +1,34 @@
-<div ng-controller="documentController" ng-cloak>
-
-	<sidenav></sidenav>
-
+<div ng-app="myApp" ng-controller="documentController" ng-cloak ng-show="usr!={}">
+    <sidenav></sidenav>
     <div layout="column" class="relative no-before" layout-fill role="main">
-
-		<toolbar></toolbar>
-
-		<md-content flex md-scroll-y class="back">
-		
-			<document layout="column" layout-padding></document>
-		
-		</md-content>
-
-		<annotator-dial ng-show="variab"></annotator-dial>
-	
-	</div>
-
+        <md-toolbar layout="row" class="md-whiteframe-4dp" style="z-index:7;">
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="Menu" ng-click="leftMenu('open', null);">
+                    <md-icon class="material-icons md-light">menu</md-icon>
+                </md-button>
+                <md-button class="btn1" ng-click="homepage()">
+                    easyRASH
+                </md-button>
+                <span flex></span>
+                <md-button hide-xs show-gt-xs ng-click="annotatorAction(url,role)" class="md-flat" aria-label="Annotator Mode" ng-show="annotatorbutton">
+                    {[{buttonText}]}
+                </md-button>
+                <md-button show-xs hide-gt-xs ng-show="annotatorbutton" class="btn2 md-flat" aria-label="Annotator Mode" ng-click="annotatorAction(url,role)">
+                    {[{buttonTextS}]}
+                </md-button>
+                <md-button class="md-icon-button" aria-label="Help" ng-click="help()">
+                    <md-icon class="mterial-icons md-light">help</md-icon>
+                </md-button>
+                <user-menu></user-menu>
+            </div>
+        </md-toolbar>
+        <md-content flex md-scroll-y class="back" id="container">
+            <document layout="column" layout-padding></document>
+			
+			<homeevents></homeevents>
+        </md-content>
+        <div layout="column" layout-align="end end">
+            <annotator-dial ng-show="annMode"></annotator-dial>
+        </div>
+    </div>
 </div>

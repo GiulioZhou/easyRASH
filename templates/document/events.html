@@ -1,13 +1,16 @@
-<section  ng-repeat="event in documents">
-	<md-subheader class="md-primary">{[{event.name}]}</md-subheader>
-		<md-list layout="column" layout-padding>
-			<md-list-item class="md-2-line md-button"  md-ink-ripple ng-repeat="doc in event.docs" >
-				<div class="md-list-item-text nav-but"  ng-click="leftMenu('close', doc.url, doc.role, doc.title, event.name)">
-					<h3 class="no-before">{[{ doc.title }]}</h3>
-					<p> {[{doc.role}]}</p>
-					<span  ng-style="statusColor(doc.status)"> {[{doc.status}]}</span>
-				</div>
-			<md-divider ></md-divider>
-		</md-list-item>
-	</md-list>
+<section ng-repeat="event in documents">
+    <md-subheader class="md-primary">{[{event.name}]}</md-subheader>
+    <md-list layout="column" layout-padding>
+        <md-list-item class="md-2-line md-button" md-ink-ripple ng-repeat="doc in event.docs">
+            <div class="md-list-item-text nav-but" ng-click="leftMenu('close', doc.url, doc.role, doc.title, event.name, doc.status, doc.roleFlag[0], doc.roleFlag[1], doc.roleFlag[2])">
+                <md-tooltip md-direction="right" md-delay="150">
+                    {[{ doc.title }]}
+                </md-tooltip>
+                <h3 class="no-before">{[{ doc.title }]}</h3>
+                <p> {[{doc.role}]}</p>
+                <span ng-style="statusColor(doc.status)"> {[{doc.status}]}</span>
+            </div>
+            <md-divider></md-divider>
+        </md-list-item>
+    </md-list>
 </section>

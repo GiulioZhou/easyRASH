@@ -1,69 +1,63 @@
-angular.module('myApp').controller("loginController", 
-	['$scope','$location', 'AuthService', '$mdDialog', "$window",
- 	function ($scope, $location, AuthService, $mdDialog, $window) {
+angular.module('myApp').controller("loginController", ['$scope', '$location', 'AuthService', '$mdDialog', "$rootScope",
+    function($scope, $location, AuthService, $mdDialog, $rootScope) {
 
- 		$scope.loginForm={
- 			email: "",
- 			password:""
- 		};
+        $scope.loginForm = {
+            email: "",
+            password: ""
+        };
 
+        $scope.login = function() {
+            $rootScope.inProgress = true;
 
- 		$scope.regiForm={
- 			given_name: "",
- 			family_name: "",
- 			email: "",
- 			pass: "",
- 			sex: ""
- 		};
+            // initial values
+            $scope.error = false;
+            $scope.disabled = true;
 
- 		$scope.login = function () {
+            // call login from service
+            AuthService.login($scope.loginForm.email, $scope.loginForm.password)
+                // handle success
+                .then(function() {
+                    $rootScope.inProgress = false;
 
-			// initial values
-			$scope.error = false;
-			$scope.disabled = true;
-			
-			// call login from service
-			AuthService.login($scope.loginForm.email, $scope.loginForm.password)
-				// handle success
-				.then(function () {
-					$scope.disabled = false;
-					$scope.loginForm = {};
-					$window.location.href ="/";
-				})
-				// handle error
-				.catch(function (mess) {
-					$scope.error = true;
-					$scope.errorMessage = mess;
-					$scope.disabled = false;
-					$scope.loginForm = {};
-				});
-			};
+                    $scope.disabled = false;
+                    $scope.loginForm = {};
+                    $location.path("/");
+                })
+                // handle error
+                .catch(function(mess) {
+                    $rootScope.inProgress = false;
 
-		//functions for registration dialog
-		$scope.showAdvanced = function(ev) {
-			$mdDialog.show({
-				controller: DialogController,
-				templateUrl: '../easyRASH/templates/authentication/register.html',
-				parent: angular.element(document.body),
-				targetEvent: ev,
-				clickOutsideToClose:true,
-			fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
-		});
-		};
+                    $scope.error = true;
+                    $scope.errorMessage = mess;
+                    $scope.disabled = false;
+                    $scope.loginForm = {};
+                });
+        };
 
-		function DialogController($scope, $mdDialog) {
-			$scope.hide = function() {
-				$mdDialog.hide();
-			};
+        //functions for registration dialog
+        $scope.showAdvanced = function(ev) {
+            $mdDialog.show({
+                controller: DialogController,
+                templateUrl: '../easyRASH/templates/authentication/register.html',
+                parent: angular.element(document.body),
+                targetEvent: ev,
+                clickOutsideToClose: true,
+                fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+            });
+        };
 
-			$scope.cancel = function() {
-				$mdDialog.cancel();
-			};
+        function DialogController($scope, $mdDialog) {
+            $scope.hide = function() {
+                $mdDialog.hide();
+            };
 
-			$scope.answer = function(answer) {
-				$mdDialog.hide(answer);
-			};
-		}
+            $scope.cancel = function() {
+                $mdDialog.cancel();
+            };
 
-
-	}]);
+            $scope.answer = function(answer) {
+                $mdDialog.hide(answer);
+            };
+        }
+    }
+]);
